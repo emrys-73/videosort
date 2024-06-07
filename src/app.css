@@ -76,3 +76,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes breathing {
+  0%, 100% {
+    opacity: 1; /* 100% opacity */
+  }
+  50% {
+    opacity: 0.2; /* 40% opacity */
+  }
+}
+
+/* Apply the animation to the component */
+.breathe {
+  animation: breathing 3s infinite; /* 5 seconds duration, infinite loop */
+}
+
+::selection {
+    background-color: #D72655; /* Change this to whatever color you want */
+    color: #ffffff;
+}

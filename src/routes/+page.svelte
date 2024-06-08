@@ -88,6 +88,114 @@
 
 </div>
 
+<div class="w-full h-full min-h-screen justify-start items-center flex flex-col py-20">
+   <div class="w-4/5 h-full flex flex-col gap-6 justify-center items-center">
+        <!-- First row -->
+        <div class="w-full h-full flex flex-row gap-6">
+            <div class="w-full h-auto bg-[#161617] rounded-3xl flex flex-col justify-center items-center p-6">
+                <h4 class="w-full text-center items-center text-white">
+                    AI-Powered
+                </h4>
+                <h3 class="bg-gradient-to-r from-[#F2698D] to-[#D72655] text-transparent bg-clip-text text-6xl font-semibold py-2 text-center">
+                    Sorting and Labelling
+                </h3>
+                <img src="/verses.png" alt="tags" class="pt-20">
+            </div>
+            <div class="w-full h-full flex flex-col gap-6">
+                <div class="w-full h-full bg-[#161617] rounded-3xl min-h-[25vh] justify-center items-center p-6 flex">
+                    <h3 class="bg-gradient-to-r from-[#F2698D] to-[#D72655] inline-block text-transparent bg-clip-text text-6xl font-semibold h-full w-full py-2 text-center">
+                        Industry-leading AI video indexing engine
+                    </h3>
+                </div>
+                <div class="w-full h-full  min-h-[30vh] flex flex-row gap-6">
+                    <div class="bg-[#161617] rounded-3xl w-full h-auto flex flex-col justify-center items-center p-6">
+                        <h4 class="w-full text-center items-center text-white">
+                            Auto-generated
+                        </h4>
+                        <h3 class="bg-gradient-to-r from-[#F2698D] to-[#D72655] text-transparent bg-clip-text text-6xl font-semibold py-2 text-center">
+                            Searchable Databse
+                        </h3>
+                    </div>
+                    <div class="bg-[#161617] rounded-3xl w-full h-auto flex flex-col justify-center items-center gap-6">
+                        <h3 class="text-8xl text-center items-center flex justify-center">
+                            🙋‍♂️
+                        </h3>
+                        <h4 class="w-full text-center items-center text-white">
+                            Face Recognition
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second row -->
+        <div class="w-full h-full flex flex-row gap-6 ">
+            <div class="w-full flex flex-col gap-6">
+                <div class="w-full h-auto bg-[#161617] rounded-3xl min-h-[30vh] flex flex-col gap-2 justify-center items-center ">
+                    <h4 class="w-full text-center items-center text-white">
+                        Up to
+                    </h4>
+
+                    <h3 class="bg-gradient-to-r from-[#F2698D] to-[#D72655] text-transparent bg-clip-text text-8xl font-semibold py-2 text-center">
+                        94%
+                    </h3>
+
+                    <h4 class="w-full text-center items-center text-white">
+                        faster than manual labelling
+                    </h4>
+                </div>
+
+                <div class="w-full h-auto bg-[#161617] rounded-3xl min-h-[30vh] flex flex-col gap-6 justify-center items-center p-6">
+                    <h3 class="text-8xl text-center items-center flex justify-center">
+                        😋✌️
+                    </h3>
+                    <h4 class="w-full text-center items-center text-white">
+                        Emotion Detection
+                    </h4>
+                </div>
+            </div>
+            <div class="w-full min-w-[60vw] h-auto rounded-3xl bg-[#161617] flex flex-col justify-center items-center relative">
+                <img src="/macmock.png" alt="mac" class="h-2/3 absolute z-40">
+                <div class="w-[33.5vw] h-[34vh] absolute z-50 min-h-80 bg-red-500 rounded-2xl mb-10">
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <iframe src="/" frameborder="0"
+                        class="w-full h-full"
+                        />
+                </div>
+            </div>
+        </div>
+
+        <!-- Third row -->
+        <div class="w-full h-full flex flex-row gap-6">
+            <div class="w-full h-full min-h-[20vh] rounded-3xl bg-[#161617]">
+
+            </div>
+        </div>
+
+        <!-- Fourth row -->
+        <div class="w-full h-full flex flex-row gap-6">
+            <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
+                <div class="w-full h-full bg-[#161617] rounded-3xl min-h-[40vh]">
+
+                </div>
+                <div class="w-full h-full bg-[#161617] rounded-3xl min-h-[25vh]">
+
+                </div>
+            </div>
+            <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
+                <div class="w-full h-full bg-[#161617] rounded-3xl min-h-[35vh]">
+
+                </div>
+                <div class="w-full h-full bg-[#161617] rounded-3xl min-h-[30vh]">
+
+                </div>
+            </div>
+        </div>
+
+
+   </div>
+</div>
+
     <!-- <div class=" w-full sm:w-3/4 md:w-3/5 justify-center items-center">
         <div class="font-bold px-4 py-4 flex flex-col justify-center items-center text-center border-[1px] rounded-xl drop-shadow-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus arcu eget urna iaculis, nec tempus urna dapibus. Curabitur at ex felis.

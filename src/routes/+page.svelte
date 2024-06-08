@@ -314,7 +314,7 @@
     </div>
 
     <div class="w-full flex flex-col text-center justify-center items-center py-16">
-        <span class="md:w-3/5 w-full text-center text-3xl font-medium text-white">
+        <span class="md:w-3/5 w-full text-center text-3xl font-medium text-main dark:text-sec">
             Simplify Your Workflow, Maximize Your Creativity. Effortlessly Manage and Organize Large Video Footage Volumes with AI-Powered Automation that sorts and labels your video footage for you.
         </span>
     </div>
@@ -322,7 +322,7 @@
 
     <div class="w-full min-h-[90vh] h-full flex flex-col justify-center items-center gap-4">
 
-        <a href="https://tally.so/r/3NVJ4j" target="_blank" class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-main hover:text-sec text-center transition-all duration-500 ease-in-out">
+        <a href="https://tally.so/r/3NVJ4j" target="_blank" class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-main hover:text-sec dark:text-sec dark:hover:text-main text-center transition-all duration-500 ease-in-out">
             Launching Soon
         </a>
 

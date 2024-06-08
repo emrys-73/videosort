@@ -16,6 +16,11 @@ const config: Config = {
 		extend: {
 			colors: {
 				main: '#D72655',
+				sec: '#F2C798',
+				myBlack: '#0E0004',
+				myGray:'#161412',
+				myWhite: '#FFFAF4',
+				myLightGray: '#FDF4EB',
 				border: "hsl(var(--border) / <alpha-value>)",
 				input: "hsl(var(--input) / <alpha-value>)",
 				ring: "hsl(var(--ring) / <alpha-value>)",

@@ -10,19 +10,19 @@
 
 <ModeWatcher />
 
-<div class="w-full h-full min-h-screen flex flex-col justify-center items-center relative bg-[#F5F5F7] dark:bg-[#000] text-main">
+<div class="w-full h-full min-h-screen flex flex-col justify-center items-center relative dark:bg-myBlack bg-myWhite ">
 	<div class="fixed top-0 h-[5vh] w-full flex flex-row justify-between px-6 items-center backdrop-blur-md z-50">
-		<div class="font-black text-lg uppercase ">
+		<div class="font-black text-lg uppercase dark:text-sec text-main ">
 			Videosort
 		</div>
 
-		<div>
+		<div class="">
 			<Button on:click={toggleMode} variant="outline" size="icon">
 				<Sun
-				  class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+				  class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 dark:text-sec text-main"
 				/>
 				<Moon
-				  class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+				  class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 dark:text-sec text-main"
 				/>
 			  </Button>
 		</div>
@@ -32,7 +32,7 @@
 		<slot/>
 	</div>
 
-	<div class="w-full absolute bottom-0 h-16 bg-[#000000] text-white dark:text-white dark:bg-[#161617] justify-between items-center px-8 py-2 flex flex-row">
+	<div class="w-full absolute bottom-0 h-16 dark:bg-myGray  text-main dark:text-secc bg-myLightGray justify-between items-center px-8 py-2 flex flex-row">
 		<div>
 			All rights reserved
 		</div>

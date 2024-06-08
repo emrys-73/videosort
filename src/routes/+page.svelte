@@ -41,7 +41,7 @@
 		}
 	];
 
-    let gradient = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text "
+    let gradient = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-5xl lg:text-6xl"
 
     let maincta;
 
@@ -85,8 +85,8 @@
 		</video> -->
 
     
-    <div class="py-4">
-        <h1 class="scroll-m-20 {headerGradient ? gradient : 'text-main'} font-bold lg:text-7xl text-center">
+    <div class="py-4 px-6">
+        <h1 class="scroll-m-20 {headerGradient ? gradient : 'text-main'} font-bold text-5xl lg:text-7xl text-center">
             AI-Driven Footage Sorting <br>
             for Film Makers and Content Creators
         </h1>
@@ -115,17 +115,17 @@
 </div>
 
 <div class="w-full h-full min-h-screen justify-start items-center flex flex-col py-20">
-   <div class="w-4/5 h-full flex flex-col gap-6 justify-center items-center">
+   <div class="lg:w-4/5 w-full px-6 h-full flex flex-col gap-6 justify-center items-center ">
         <!-- First row -->
-        <div class="w-full h-full flex flex-row gap-6">
-            <div class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl flex flex-col justify-center items-center p-6">
+        <div class="w-full h-full flex lg:flex-row flex-col gap-6 bg-red-500">
+            <div class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl flex flex-col justify-center items-center p-6 py-10 lg:py-6">
                 <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
                     AI-Powered
                 </h4>
-                <h3 class="{gradient} text-transparent bg-clip-text text-6xl font-semibold py-2 text-center">
+                <h3 class="{gradient} text-transparent font-semibold py-2 text-center">
                     Sorting and Labelling
                 </h3>
-                <img src="/verses.png" alt="tags" class="pt-20">
+                <img src="/verses.png" alt="tags" class="pt-6">
             </div>
             <div class="w-full h-full flex flex-col gap-6">
                 <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center p-6 flex transition-all duration-500 ease-in-out">
@@ -192,7 +192,7 @@
         </div>
 
         <!-- Third row -->
-        <div class="w-full h-full flex flex-row gap-6">
+        <div class="w-full h-full flex-row gap-6 hidden">
             <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
                 <h4 class="w-full text-center items-center {gradient} font-semibold text-xl">
                     Sell or find leftover shots through our
@@ -313,8 +313,8 @@
 
     </div>
 
-    <div class="w-full flex flex-col text-center justify-center items-center py-16">
-        <span class="md:w-3/5 w-full text-center text-3xl font-medium text-main dark:text-sec">
+    <div class="w-full flex flex-col text-center justify-center items-center py-16 px-6">
+        <span class="md:w-3/5 w-full text-center text-xl md:text-2xl lg:text-3xl font-medium text-main dark:text-sec">
             Simplify Your Workflow, Maximize Your Creativity. Effortlessly Manage and Organize Large Video Footage Volumes with AI-Powered Automation that sorts and labels your video footage for you.
         </span>
     </div>

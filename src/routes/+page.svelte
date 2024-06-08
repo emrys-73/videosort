@@ -43,6 +43,8 @@
 
     let gradient = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-5xl lg:text-6xl"
 
+    let gradientSmall = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-3xl"
+
     let maincta;
 
     let features;
@@ -117,7 +119,7 @@
 <div class="w-full h-full min-h-screen justify-start items-center flex flex-col py-20">
    <div class="lg:w-4/5 w-full px-6 h-full flex flex-col gap-6 justify-center items-center ">
         <!-- First row -->
-        <div class="w-full h-full flex lg:flex-row flex-col gap-6 ">
+        <div class="w-full h-full flex lg:flex-row flex-col gap-6">
             <div class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl flex flex-col justify-center items-center p-6 py-10 lg:py-6">
                 <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
                     AI-Powered
@@ -194,7 +196,7 @@
         <!-- Third row -->
         <div class="w-full h-full flex-row gap-6 flex">
             <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
-                <h4 class="w-full text-center items-center {gradient} font-semibold text-xl">
+                <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
                     Sell or find leftover shots through our
                 </h4>
 
@@ -256,7 +258,7 @@
 
                 </div>
                 <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[30vh] justify-center items-center flex flex-col">
-                    <h4 class="w-full text-center items-center {gradient} font-semibold text-xl">
+                    <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
                         Process up to 
                     </h4>
     
@@ -264,7 +266,7 @@
                         1.000.000
                     </h3>
 
-                    <h4 class="w-full text-center items-center {gradient} font-semibold text-xl">
+                    <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
                         minutes of footage per year
                     </h4>
                 </div>

@@ -10,7 +10,7 @@
 
 <ModeWatcher />
 
-<div class="w-full h-full min-h-screen flex flex-col justify-center items-center relative dark:bg-myBlack bg-myWhite ">
+<div class="w-full h-full min-h-screen flex flex-col justify-center items-center relative dark:bg-myBlack bg-sec ">
 	<div class="fixed top-0 h-[5vh] w-full flex flex-row justify-between px-6 items-center backdrop-blur-md z-50">
 		<div class="font-black text-lg uppercase dark:text-sec text-main ">
 			Videosort

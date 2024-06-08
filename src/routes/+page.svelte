@@ -43,7 +43,7 @@
 
     let gradient = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-5xl lg:text-6xl"
 
-    let gradientSmall = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-3xl"
+    let gradientSmall = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-xl lg:text-3xl"
 
     let maincta;
 
@@ -270,6 +270,19 @@
                         minutes of footage per year
                     </h4>
                 </div>
+            </div>
+        </div>
+
+        <!-- Fifth Row -->
+        <div class="w-full h-full flex-row gap-6 flex">
+            <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
+                <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
+                    Sell or find leftover shots through our
+                </h4>
+
+                <h3 class="{gradient} text-8xl font-semibold py-2 text-center">
+                    Footage Marketplace
+                </h3>
             </div>
         </div>
 

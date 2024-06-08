@@ -117,7 +117,7 @@
 <div class="w-full h-full min-h-screen justify-start items-center flex flex-col py-20">
    <div class="lg:w-4/5 w-full px-6 h-full flex flex-col gap-6 justify-center items-center ">
         <!-- First row -->
-        <div class="w-full h-full flex lg:flex-row flex-col gap-6 bg-red-500">
+        <div class="w-full h-full flex lg:flex-row flex-col gap-6 ">
             <div class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl flex flex-col justify-center items-center p-6 py-10 lg:py-6">
                 <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
                     AI-Powered
@@ -155,7 +155,7 @@
         </div>
 
         <!-- Second row -->
-        <div class="w-full h-full flex flex-row gap-6 ">
+        <div class="w-full h-full hidden flex-row gap-6 ">
             <div class="w-full flex flex-col gap-6">
                 <div class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[30vh] flex flex-col gap-2 justify-center items-center p-6">
                     <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
@@ -192,7 +192,7 @@
         </div>
 
         <!-- Third row -->
-        <div class="w-full h-full flex-row gap-6 hidden">
+        <div class="w-full h-full flex-row gap-6 flex">
             <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
                 <h4 class="w-full text-center items-center {gradient} font-semibold text-xl">
                     Sell or find leftover shots through our

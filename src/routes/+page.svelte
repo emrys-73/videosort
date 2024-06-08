@@ -150,7 +150,7 @@
                     <div bind:this={f1}>
                       {#if intersecting}
                       <div
-                      transition:fly={{ delay: 0, duration: 1400, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
+                      transition:fade={{ delay: 0, duration: 1400, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
                       class="w-full md:h-[50vh]"
                         >
                         <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl flex flex-col justify-center items-center p-6 py-10 lg:py-6">
@@ -176,7 +176,7 @@
                         {#if intersecting}
 
                         <div
-                        transition:fly={{ delay: 0, duration: 1400, x: 800, y: 0, opacity: 0.01, easing: quintOut }}
+                        transition:fade={{ delay: 0, duration: 1400, x: 800, y: 0, opacity: 0.01, easing: quintOut }}
                             class="w-full flex flex-col gap-6 h-full">
                             <div 
                                 
@@ -258,7 +258,7 @@
                 <div bind:this={f3} class="w-full h-full">
                     {#if intersecting}
                         <div
-                            transition:fly={{ delay: 0, duration: 1400, x: 0, y: -800, opacity: 0.01, easing: quintOut }}
+                            transition:fade={{ delay: 0, duration: 1400, x: 0, y: -800, opacity: 0.01, easing: quintOut }}
                             class="w-full"
                                 >
                             <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-row justify-center items-center p-6 gap-6">
@@ -284,7 +284,7 @@
                     <div bind:this={f4} class="w-full h-full">
                         {#if intersecting} 
                         <div
-                            transition:fly={{ delay: 0, duration: 1400, x: -800, y: 0, opacity: 0.01, easing: quintOut }}    
+                            transition:fade={{ delay: 0, duration: 1400, x: -800, y: 0, opacity: 0.01, easing: quintOut }}    
                             class="w-full h-full flex flex-col gap-6 ">
                             <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[40vh] justify-center items-center flex flex-col">
                                 <h4 class="w-full text-center items-center {gradient} font-semibold text-xl">
@@ -322,7 +322,7 @@
                     <div bind:this={f5} class="w-full h-full">
                         {#if intersecting} 
                             <div
-                                transition:fly={{ delay: 0, duration: 1400, x: 800, y: 0, opacity: 0.01, easing: quintOut }}    
+                                transition:fade={{ delay: 0, duration: 1400, x: 800, y: 0, opacity: 0.01, easing: quintOut }}    
                                 class="w-full h-full flex flex-col gap-6"
                                 >
                                 <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[35vh] justify-center items-center gap-2 flex flex-col">
@@ -373,7 +373,7 @@
                 <div bind:this={f6} class="w-full h-full">
                     {#if intersecting}
                         <div
-                            transition:fly={{ delay: 0, duration: 1400, x: 0, y: -800, opacity: 0.01, easing: quintOut }}
+                            transition:fade={{ delay: 0, duration: 1400, x: 0, y: -800, opacity: 0.01, easing: quintOut }}
                             >
                             <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
                                 <h4 class="w-full text-center items-center {gradientSmall} font-semibold">

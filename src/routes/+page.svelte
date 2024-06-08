@@ -43,6 +43,8 @@
 
     let gradient = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-5xl lg:text-6xl"
 
+    let gradientBig = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-7xl lg:text-8xl"
+
     let gradientSmall = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-xl lg:text-3xl"
 
     let maincta;
@@ -195,14 +197,15 @@
 
         <!-- Third row -->
         <div class="w-full h-full flex-row gap-6 flex">
-            <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
-                <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
-                    Sell or find leftover shots through our
-                </h4>
-
-                <h3 class="{gradient} text-8xl font-semibold py-2 text-center">
-                    Footage Marketplace
+            <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-row justify-center items-center p-6 gap-6">
+                <h3 class="{gradientBig} text-8xl font-semibold py-2 text-center">
+                    94%
                 </h3>
+                <h4 class=" font-semibold tracking-wider text-main dark:text-main text-xl lg:text-3xl">
+                    Faster than manual labelling
+                    <br>
+                    and with higher accuracy
+                </h4>
             </div>
         </div>
 

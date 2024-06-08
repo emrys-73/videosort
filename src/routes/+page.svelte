@@ -41,9 +41,9 @@
 		}
 	];
 
-    let gradient = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-5xl lg:text-6xl"
+    let gradient = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-4xl xl:text-5xl"
 
-    let gradientBig = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-7xl lg:text-8xl"
+    let gradientBig = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-6xl md:text-8xl "
 
     let gradientSmall = "bg-gradient-to-r from-sec to-main text-transparent bg-clip-text text-xl lg:text-3xl"
 
@@ -133,21 +133,21 @@
             </div>
             <div class="w-full h-full flex flex-col gap-6">
                 <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center p-6 flex transition-all duration-500 ease-in-out">
-                    <h3 class="{gradient} text-6xl font-semibold h-full w-full py-2 text-center">
+                    <h3 class="{gradient} font-semibold h-full w-full py-2 text-center">
                         Industry-leading AI video indexing engine
                     </h3>
                 </div>
-                <div class="w-full h-full  min-h-[30vh] flex flex-row gap-6">
+                <div class="w-full h-full min-h-[30vh] flex flex-row gap-6">
                     <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center p-6">
                         <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
                             Auto-generated
                         </h4>
-                        <h3 class="{gradient} text-6xl font-semibold py-2 text-center">
+                        <h3 class="{gradient} font-semibold py-2 text-center">
                             Searchable Database
                         </h3>
                     </div>
-                    <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center gap-6">
-                        <h3 class="text-8xl text-center items-center flex justify-center">
+                    <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center gap-6 p-6">
+                        <h3 class="text-4xl sm:text-5xl lg:text-6xl xl:text-8xl text-center items-center flex justify-center">
                             🙋‍♂️
                         </h3>
                         <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
@@ -170,7 +170,7 @@
                         94%
                     </h3>
 
-                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-lg md:text-xl">
                         faster than manual labelling
                     </h4>
                 </div>
@@ -198,10 +198,10 @@
         <!-- Third row -->
         <div class="w-full h-full flex-row gap-6 flex">
             <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-row justify-center items-center p-6 gap-6">
-                <h3 class="{gradientBig} text-8xl font-semibold py-2 text-center">
+                <h3 class="{gradientBig} font-semibold py-2 text-center">
                     94%
                 </h3>
-                <h4 class=" font-semibold tracking-wider text-main dark:text-main text-xl lg:text-3xl">
+                <h4 class=" font-semibold tracking-wider text-main dark:text-main text-lg md:text-xl lg:text-2xl xl:text-3xl">
                     Faster than manual labelling
                     <br>
                     and with higher accuracy
@@ -210,17 +210,17 @@
         </div>
 
         <!-- Fourth row -->
-        <div class="w-full h-full flex flex-row gap-6">
+        <div class="w-full h-full flex md:flex-row flex-col gap-6">
             <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
                 <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[40vh] justify-center items-center flex flex-col">
                     <h4 class="w-full text-center items-center {gradient} font-semibold text-xl">
                         Seamless
                     </h4>
-                    <h3 class="{gradient} text-8xl font-semibold py-2 text-center">
+                    <h3 class="{gradient} font-semibold md:py-2 text-center">
                         Integrations
                     </h3>
 
-                    <div class="flex flex-row w-full h-full justify-center gap-16 py-8">
+                    <div class="flex flex-row w-full h-full justify-center ld:gap-16 gap-6 py-6">
                         <img src="/davinci.png" alt="DaVinci">
                         <img src="/premiere.png" alt="Premiere">
                         <img src="/finalcut.png" alt="Final Cut">
@@ -232,7 +232,7 @@
                         Indexable
                     </h4>
 
-                    <h3 class="{gradient} text-6xl font-semibold py-2 text-center">
+                    <h3 class="{gradient} font-semibold py-2 text-center">
                         Speech-To-Text Transcription
                     </h3>
 
@@ -245,10 +245,10 @@
                         Customisable tags and categories
                     </h4>
 
-                    <div class="flex flex-row w-full h-full justify-center gap-4 py-8">
+                    <div class="flex flex-row w-full h-full justify-center gap-1 md:gap-2 lg:gap-4 py-8">
                         {#each tags as tag}
                             <div
-                                class="rounded-full w-20 bg-myWhite dark:bg-[#292929] h-20 text-center flex justify-center items-center text-4xl"
+                                class="rounded-full w-16 h-16 lg:w-16 lg:h-16 bg-main dark:bg-[#292929] text-center flex justify-center items-center text-2xl xl:text-4xl"
                                 >
                                 {tag.content}
                             </div>
@@ -265,7 +265,7 @@
                         Process up to 
                     </h4>
     
-                    <h3 class="{gradient} text-8xl font-semibold py-2 text-center">
+                    <h3 class="{gradient} font-semibold py-2 text-center">
                         1.000.000
                     </h3>
 
@@ -283,7 +283,7 @@
                     Sell or find leftover shots through our
                 </h4>
 
-                <h3 class="{gradient} text-8xl font-semibold py-2 text-center">
+                <h3 class="{gradient} font-semibold py-2 text-center">
                     Footage Marketplace
                 </h3>
             </div>
@@ -331,14 +331,16 @@
 
     </div>
 
-    <div class="w-full flex flex-col text-center justify-center items-center py-16 px-6">
-        <span class="md:w-3/5 w-full text-center text-xl md:text-2xl lg:text-3xl font-medium text-main dark:text-sec">
+    <div class="w-full flex flex-col text-center justify-center items-center min-h-[90vh] px-6 gap-4">
+        <span class="md:w-3/5 w-full text-center text-xl md:text-2xl lg:text-3xl font-medium text-main dark:text-main">
             Simplify Your Workflow, Maximize Your Creativity. Effortlessly Manage and Organize Large Video Footage Volumes with AI-Powered Automation that sorts and labels your video footage for you.
         </span>
+        <Button href="https://tally.so/r/3NVJ4j" slot="label" target="_blank" class="min-w-[20vw] hover:min-w-[30vw] transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl hover:text-sec hover:border-sec hover:bg-transparent px-6">Join Waitlist</Button>
     </div>
 
 
-    <div class="w-full min-h-[90vh] h-full flex flex-col justify-center items-center gap-4">
+    <!-- Hidden Block -->
+    <div class="w-full min-h-[90vh] h-full hidden flex-col justify-center items-center gap-4">
 
         <a href="https://tally.so/r/3NVJ4j" target="_blank" class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-main hover:text-sec dark:text-sec dark:hover:text-main text-center transition-all duration-500 ease-in-out">
             Launching Soon

@@ -137,13 +137,13 @@
                         Industry-leading AI video indexing engine
                     </h3>
                 </div>
-                <div class="w-full h-full min-h-[30vh] flex flex-row gap-6">
+                <div class="w-full h-full min-h-[20vh] flex flex-row gap-6">
                     <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center p-6">
                         <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
                             Auto-generated
                         </h4>
                         <h3 class="{gradient} font-semibold py-2 text-center">
-                            Searchable Database
+                            Database
                         </h3>
                     </div>
                     <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center gap-6 p-6">

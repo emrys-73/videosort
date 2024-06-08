@@ -52,6 +52,19 @@
     let features;
 
 
+    let f1;
+    let f2;
+    let f3;
+    let f4;
+    let f5;
+    let f6;
+    let f7;
+    let f8;
+
+
+    let title;
+    let bottom;
+
     let headerGradient = false;
 
     const tags = [
@@ -90,11 +103,20 @@
 
     
     <div class="py-4 px-6">
-        <h1 class="scroll-m-20 {headerGradient ? gradient : 'text-main'} font-bold text-5xl lg:text-7xl text-center">
-            AI-Driven Footage Sorting <br>
-            for Film Makers and Content Creators
-        </h1>
-        
+        <IntersectionObserver element={title} let:intersecting once={false}>
+            <div bind:this={title}>
+                {#if intersecting}
+                    <div
+                        transition:fade={{ delay: 200, duration: 1000 }}
+                        >
+                        <h1 class="scroll-m-20 {headerGradient ? gradient : 'text-main'} font-bold text-5xl lg:text-7xl text-center">
+                            AI-Driven Footage Sorting <br>
+                            for Film Makers and Content Creators
+                        </h1>
+                    </div>
+                {/if}
+            </div>
+        </IntersectionObserver>
     </div>
 
     <div class="flex flex-row gap-2 justify-center items-center">
@@ -118,48 +140,83 @@
 
 </div>
 
-<div class="w-full h-full min-h-screen justify-start items-center flex flex-col py-20">
-   <div class="lg:w-4/5 w-full px-6 h-full flex flex-col gap-6 justify-center items-center ">
+<div class="w-full h-full min-h-screen justify-start items-center flex flex-col overflow-hidden">
+   <div class="lg:w-4/5 w-full px-6 h-full flex flex-col gap-6 justify-center items-center">
         <!-- First row -->
         <div class="w-full h-full flex lg:flex-row flex-col gap-6">
-            <div class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl flex flex-col justify-center items-center p-6 py-10 lg:py-6">
-                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                    AI-Powered
-                </h4>
-                <h3 class="{gradient} text-transparent font-semibold py-2 text-center">
-                    Sorting and Labelling
-                </h3>
-                <img src="/verses.png" alt="tags" class="pt-6">
+            
+            <div class="w-full">
+                <IntersectionObserver element={f1} let:intersecting>
+                    <div bind:this={f1}>
+                      {#if intersecting}
+                      <div
+                      transition:fly={{ delay: 0, duration: 2000, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
+                      class="w-full md:h-[50vh]"
+                        >
+                        <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl flex flex-col justify-center items-center p-6 py-10 lg:py-6">
+                            <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                AI-Powered
+                            </h4>
+                            <h3 class="{gradient} text-transparent font-semibold py-2 text-center">
+                                Sorting and Labelling
+                            </h3>
+                            <img src="/verses.png" alt="tags" class="pt-6">
+                        </div>
+                      </div>
+                      {/if}
+                    </div>
+                  </IntersectionObserver>
             </div>
-            <div class="w-full h-full flex flex-col gap-6">
-                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center p-6 flex transition-all duration-500 ease-in-out">
-                    <h3 class="{gradient} font-semibold h-full w-full py-2 text-center">
-                        Industry-leading AI video indexing engine
-                    </h3>
-                </div>
-                <div class="w-full h-full min-h-[20vh] flex flex-row gap-6">
-                    <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center p-6">
-                        <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                            Auto-generated
-                        </h4>
-                        <h3 class="{gradient} font-semibold py-2 text-center">
-                            Database
-                        </h3>
+            
+
+            <div class="w-full h-[50vh] flex flex-col gap-6">
+                <IntersectionObserver element={f2} let:intersecting>
+                    <div bind:this={f2}
+                        class="w-full h-full">
+                        {#if intersecting}
+
+                        <div
+                        transition:fly={{ delay: 0, duration: 2000, x: 1200, y: 0, opacity: 0.01, easing: quintOut }}
+                            class="w-full flex flex-col gap-6 h-full">
+                            <div 
+                                
+                                class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex-col p-6 flex transition-all duration-500 ease-in-out">
+        
+                                <h3 class="{gradient} justify-center items-center flex font-semibold h-full w-full py-2 text-center">
+                                        Industry-leading AI video indexing engine
+                                    </h3>
+                            </div>
+
+                            <div class="w-full h-full min-h-[20vh] flex flex-row gap-6">
+                                <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center p-6">
+                                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                        Auto-generated
+                                    </h4>
+                                    <h3 class="{gradient} font-semibold py-2 text-center">
+                                        Database
+                                    </h3>
+                                </div>
+                            <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center gap-6 p-6">
+                                <h3 class="text-4xl sm:text-5xl lg:text-6xl xl:text-8xl text-center items-center flex justify-center">
+                                    🙋‍♂️
+                                </h3>
+                                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                    Face Recognition
+                                </h4>
+                            </div>
+                        </div> 
+
                     </div>
-                    <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center gap-6 p-6">
-                        <h3 class="text-4xl sm:text-5xl lg:text-6xl xl:text-8xl text-center items-center flex justify-center">
-                            🙋‍♂️
-                        </h3>
-                        <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                            Face Recognition
-                        </h4>
+                {/if}
                     </div>
-                </div>
+
+                </IntersectionObserver>
             </div>
         </div>
 
         <!-- Second row -->
         <div class="w-full h-full hidden flex-row gap-6 ">
+            
             <div class="w-full flex flex-col gap-6">
                 <div class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[30vh] flex flex-col gap-2 justify-center items-center p-6">
                     <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
@@ -197,96 +254,141 @@
 
         <!-- Third row -->
         <div class="w-full h-full flex-row gap-6 flex">
-            <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-row justify-center items-center p-6 gap-6">
-                <h3 class="{gradientBig} font-semibold py-2 text-center">
-                    94%
-                </h3>
-                <h4 class=" font-semibold tracking-wider text-main dark:text-main text-lg md:text-xl lg:text-2xl xl:text-3xl">
-                    Faster than manual labelling
-                    <br>
-                    and with higher accuracy
-                </h4>
-            </div>
+            <IntersectionObserver element={f3} let:intersecting once={false}>
+                <div bind:this={f3} class="w-full h-full">
+                    {#if intersecting}
+                        <div
+                            transition:fly={{ delay: 0, duration: 2000, x: 0, y: -1200, opacity: 0.01, easing: quintOut }}
+                            class="w-full"
+                                >
+                            <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-row justify-center items-center p-6 gap-6">
+                                <h3 class="{gradientBig} font-semibold py-2 text-center">
+                                    94%
+                                </h3>
+                                <h4 class=" font-semibold tracking-wider text-main dark:text-main text-lg md:text-xl lg:text-2xl xl:text-3xl">
+                                    Faster than manual labelling
+                                    <br>
+                                    and with higher accuracy
+                                </h4>
+                            </div>
+                        </div>
+                    {/if}
+                </div>
+            </IntersectionObserver>
         </div>
 
         <!-- Fourth row -->
         <div class="w-full h-full flex md:flex-row flex-col gap-6">
             <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
-                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[40vh] justify-center items-center flex flex-col">
-                    <h4 class="w-full text-center items-center {gradient} font-semibold text-xl">
-                        Seamless
-                    </h4>
-                    <h3 class="{gradient} font-semibold md:py-2 text-center">
-                        Integrations
-                    </h3>
-
-                    <div class="flex flex-row w-full h-full justify-center ld:gap-16 gap-6 py-6">
-                        <img src="/davinci.png" alt="DaVinci">
-                        <img src="/premiere.png" alt="Premiere">
-                        <img src="/finalcut.png" alt="Final Cut">
+                <IntersectionObserver element={f4} let:intersecting once={false}>
+                    <div bind:this={f4} class="w-full h-full">
+                        {#if intersecting} 
+                        <div
+                            transition:fly={{ delay: 0, duration: 2000, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}    
+                            class="w-full h-full flex flex-col gap-6 ">
+                            <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[40vh] justify-center items-center flex flex-col">
+                                <h4 class="w-full text-center items-center {gradient} font-semibold text-xl">
+                                    Seamless
+                                </h4>
+                                <h3 class="{gradient} font-semibold md:py-2 text-center">
+                                    Integrations
+                                </h3>
+            
+                                <div class="flex flex-row w-full h-full justify-center lg:gap-16 gap-6 py-6">
+                                    <img src="/davinci.png" alt="DaVinci">
+                                    <img src="/premiere.png" alt="Premiere">
+                                    <img src="/finalcut.png" alt="Final Cut">
+                                </div>
+            
+                            </div>
+                            <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex flex-col lg:p-8 p-6">
+                                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                    Indexable
+                                </h4>
+            
+                                <h3 class="{gradient} font-semibold py-2 text-center">
+                                    Speech-To-Text Transcription
+                                </h3>
+            
+                            </div>
+                        </div>
+                        {/if}
                     </div>
-
-                </div>
-                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex flex-col">
-                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                        Indexable
-                    </h4>
-
-                    <h3 class="{gradient} font-semibold py-2 text-center">
-                        Speech-To-Text Transcription
-                    </h3>
-
-                </div>
+                </IntersectionObserver>
+                
             </div>
             <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
-                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[35vh] justify-center items-center gap-2 flex flex-col">
-
-                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                        Customisable tags and categories
-                    </h4>
-
-                    <div class="flex flex-row w-full h-full justify-center gap-1 md:gap-2 lg:gap-4 py-8">
-                        {#each tags as tag}
+                <IntersectionObserver element={f5} let:intersecting once={false}>
+                    <div bind:this={f5} class="w-full h-full">
+                        {#if intersecting} 
                             <div
-                                class="rounded-full w-16 h-16 lg:w-16 lg:h-16 bg-main dark:bg-[#292929] text-center flex justify-center items-center text-2xl xl:text-4xl"
+                                transition:fly={{ delay: 0, duration: 2000, x: 1200, y: 0, opacity: 0.01, easing: quintOut }}    
+                                class="w-full h-full flex flex-col gap-6"
                                 >
-                                {tag.content}
+                                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[35vh] justify-center items-center gap-2 flex flex-col">
+
+                                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                        Customisable tags and categories
+                                    </h4>
+                
+                                    <div class="flex flex-row w-full h-full justify-center gap-1 md:gap-2 lg:gap-4 py-8">
+                                        {#each tags as tag}
+                                            <div
+                                                class="rounded-full w-16 h-16 lg:w-16 lg:h-16 bg-main dark:bg-[#292929] text-center flex justify-center items-center text-2xl xl:text-4xl"
+                                                >
+                                                {tag.content}
+                                            </div>
+                                        {/each}
+                                    </div>
+                
+                                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                        For better organisation
+                                    </h4>
+                
+                                </div>
+                                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[30vh] justify-center items-center flex flex-col">
+                                    <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
+                                        Process up to 
+                                    </h4>
+                    
+                                    <h3 class="{gradient} font-semibold py-2 text-center">
+                                        1.000.000
+                                    </h3>
+                
+                                    <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
+                                        minutes of footage per year
+                                    </h4>
+                                </div>
                             </div>
-                        {/each}
+                        {/if}
                     </div>
-
-                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                        For better organisation
-                    </h4>
-
-                </div>
-                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[30vh] justify-center items-center flex flex-col">
-                    <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
-                        Process up to 
-                    </h4>
-    
-                    <h3 class="{gradient} font-semibold py-2 text-center">
-                        1.000.000
-                    </h3>
-
-                    <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
-                        minutes of footage per year
-                    </h4>
-                </div>
+                </IntersectionObserver>
+                
             </div>
         </div>
 
         <!-- Fifth Row -->
         <div class="w-full h-full flex-row gap-6 flex">
-            <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
-                <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
-                    Sell or find leftover shots through our
-                </h4>
-
-                <h3 class="{gradient} font-semibold py-2 text-center">
-                    Footage Marketplace
-                </h3>
-            </div>
+            <IntersectionObserver element={f6} let:intersecting once={false}>
+                <div bind:this={f6} class="w-full h-full">
+                    {#if intersecting}
+                        <div
+                            transition:fly={{ delay: 0, duration: 2000, x: 0, y: -1200, opacity: 0.01, easing: quintOut }}
+                            >
+                            <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
+                                <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
+                                    Sell or find leftover shots through our
+                                </h4>
+                
+                                <h3 class="{gradient} font-semibold py-2 text-center">
+                                    Footage Marketplace
+                                </h3>
+                            </div>
+                        </div>
+                    {/if}
+                </div>
+            </IntersectionObserver>
+            
         </div>
 
 
@@ -324,17 +426,24 @@
               </div>
         
         </IntersectionObserver>
-        
-        <div class="w-full lg:w-2/3 flex flex-col">
-
-        </div>
+    
 
     </div>
 
     <div class="w-full flex flex-col text-center justify-center items-center min-h-[90vh] px-6 gap-4">
-        <span class="md:w-3/5 w-full text-center text-xl md:text-2xl lg:text-3xl font-medium text-main dark:text-main">
-            Simplify Your Workflow, Maximize Your Creativity. Effortlessly Manage and Organize Large Video Footage Volumes with AI-Powered Automation that sorts and labels your video footage for you.
-        </span>
+        <IntersectionObserver element={bottom} let:intersecting once={false}>
+            <div bind:this={bottom} class="w-full flex justify-center items-center">
+                {#if intersecting}
+                    <div
+                        transition:fade={{ delay: 300, duration: 1000 }}
+                        class="md:w-3/4 ">
+                        <span class="md:w-3/5 w-full text-center text-xl md:text-2xl lg:text-3xl font-medium text-main dark:text-main">
+                            Simplify Your Workflow, Maximize Your Creativity. Effortlessly Manage and Organize Large Video Footage Volumes with AI-Powered Automation that sorts and labels your video footage for you.
+                        </span>
+                    </div>
+                {/if}
+            </div>
+        </IntersectionObserver>
         <Button href="https://tally.so/r/3NVJ4j" slot="label" target="_blank" class="min-w-[20vw] hover:min-w-[30vw] transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl hover:text-sec hover:border-sec hover:bg-transparent px-6">Join Waitlist</Button>
     </div>
 

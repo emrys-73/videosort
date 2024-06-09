@@ -1,10 +1,15 @@
 <script>
 	import '../app.css';
-	import { ModeWatcher } from "mode-watcher";
+	import { ModeWatcher, setMode } from "mode-watcher";
 	import Sun from "svelte-radix/Sun.svelte";
   	import Moon from "svelte-radix/Moon.svelte";
   	import { toggleMode } from "mode-watcher";
   	import Button from '$lib/components/ui/button/button.svelte';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		setMode("dark");
+	})
 
 </script>
 
@@ -16,7 +21,7 @@
 			Videosort
 		</div>
 
-		<div class="">
+		<div class="hidden">
 			<Button on:click={toggleMode} variant="outline" size="icon">
 				<Sun
 				  class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 dark:text-sec text-main"

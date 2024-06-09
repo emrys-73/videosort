@@ -96,13 +96,14 @@
 <div
     transition:fade={{ delay: 300, duration: 1000 }}
     class="w-full h-full min-h-screen  flex flex-col justify-center items-center gap-4">
-    <div class="w-full h-[90vh] justify-center items-center flex flex-col relative">
+    <div class="w-full h-[90vh] justify-center items-center flex flex-col relative gap-4">
+        <video class="absolute top-0 w-full h-full z-10 opacity-15" src="/hero.mp4" type="video/mp4" muted autoplay loop playsinline disablepictureinpicture/>
         <!-- <video class="absolute w-full h-full object-cover z-0" muted autoplay loop playsinline disablepictureinpicture>
 			<source src="https://www.youtube.com/watch?v=OOnECHfc6RQ" type="video/mp4" />
 		</video> -->
 
     
-    <div class="py-4 px-6">
+    <div class="py-4 px-6 z-50">
         <IntersectionObserver element={title} let:intersecting once={true}>
             <div bind:this={title}>
                 {#if intersecting}
@@ -119,7 +120,7 @@
         </IntersectionObserver>
     </div>
 
-    <div class="flex flex-row gap-2 justify-center items-center py-8">
+    <div class="flex flex-row gap-2 justify-center items-center py-8 z-50">
         <div class="hidden">
             <Input placeholder="Enter your email" label="Email" class="min-w-[20vw]" />
         </div>
@@ -145,7 +146,7 @@
         <!-- First row -->
         <div class="w-full h-full flex lg:flex-row flex-col gap-6">
             
-            <div class="w-full">
+            <div class="w-full min-h-[50vh]">
                 <IntersectionObserver element={f1} let:intersecting>
                     <div bind:this={f1}>
                       {#if intersecting}

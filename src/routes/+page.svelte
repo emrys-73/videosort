@@ -96,7 +96,7 @@
 <div
     transition:fade={{ delay: 300, duration: 1000 }}
     class="w-full h-full min-h-screen  flex flex-col justify-center items-center gap-4">
-    <div class="w-full h-[100vh] justify-center items-center flex flex-col relative">
+    <div class="w-full h-[90vh] justify-center items-center flex flex-col relative">
         <!-- <video class="absolute w-full h-full object-cover z-0" muted autoplay loop playsinline disablepictureinpicture>
 			<source src="https://www.youtube.com/watch?v=OOnECHfc6RQ" type="video/mp4" />
 		</video> -->
@@ -119,7 +119,7 @@
         </IntersectionObserver>
     </div>
 
-    <div class="flex flex-row gap-2 justify-center items-center">
+    <div class="flex flex-row gap-2 justify-center items-center py-8">
         <div class="hidden">
             <Input placeholder="Enter your email" label="Email" class="min-w-[20vw]" />
         </div>

@@ -103,7 +103,7 @@
 
     
     <div class="py-4 px-6">
-        <IntersectionObserver element={title} let:intersecting once={false}>
+        <IntersectionObserver element={title} let:intersecting once={true}>
             <div bind:this={title}>
                 {#if intersecting}
                     <div
@@ -193,7 +193,7 @@
                                         Auto-generated
                                     </h4>
                                     <h3 class="{gradient} font-semibold py-2 text-center">
-                                        Database
+                                        Library
                                     </h3>
                                 </div>
                             <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center gap-6 p-6">
@@ -254,7 +254,7 @@
 
         <!-- Third row -->
         <div class="w-full h-full flex-row gap-6 flex">
-            <IntersectionObserver element={f3} let:intersecting once={false}>
+            <IntersectionObserver element={f3} let:intersecting once={true}>
                 <div bind:this={f3} class="w-full h-full">
                     {#if intersecting}
                         <div
@@ -280,7 +280,7 @@
         <!-- Fourth row -->
         <div class="w-full h-full flex md:flex-row flex-col gap-6">
             <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
-                <IntersectionObserver element={f4} let:intersecting once={false}>
+                <IntersectionObserver element={f4} let:intersecting once={true}>
                     <div bind:this={f4} class="w-full h-full">
                         {#if intersecting} 
                         <div
@@ -318,7 +318,7 @@
                 
             </div>
             <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
-                <IntersectionObserver element={f5} let:intersecting once={false}>
+                <IntersectionObserver element={f5} let:intersecting once={true}>
                     <div bind:this={f5} class="w-full h-full">
                         {#if intersecting} 
                             <div
@@ -348,16 +348,14 @@
                                 </div>
                                 <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[30vh] justify-center items-center flex flex-col">
                                     <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
-                                        Process up to 
+                                        Video Tagging and clustering, tailored to 
                                     </h4>
                     
                                     <h3 class="{gradient} font-semibold py-2 text-center">
-                                        1.000.000
+                                        Your Workflow
                                     </h3>
                 
-                                    <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
-                                        minutes of footage per year
-                                    </h4>
+
                                 </div>
                             </div>
                         {/if}
@@ -369,20 +367,20 @@
 
         <!-- Fifth Row -->
         <div class="w-full h-full flex-row gap-6 flex">
-            <IntersectionObserver element={f6} let:intersecting once={false}>
+            <IntersectionObserver element={f6} let:intersecting once={true}>
                 <div bind:this={f6} class="w-full h-full">
                     {#if intersecting}
                         <div
                             transition:fade={{ delay: 0, duration: 1400, x: 0, y: -800, opacity: 0.01, easing: quintOut }}
                             >
                             <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
+                                <h3 class="{gradient} font-semibold py-2 text-center">
+                                    Generative AI Agents
+                                </h3>
                                 <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
-                                    Sell or find leftover shots through our
+                                    to create a rough cut based on your footage & briefing
                                 </h4>
                 
-                                <h3 class="{gradient} font-semibold py-2 text-center">
-                                    Footage Marketplace
-                                </h3>
                             </div>
                         </div>
                     {/if}
@@ -431,7 +429,7 @@
     </div>
 
     <div class="w-full flex flex-col text-center justify-center items-center min-h-[90vh] px-6 gap-4">
-        <IntersectionObserver element={bottom} let:intersecting once={false}>
+        <IntersectionObserver element={bottom} let:intersecting once={true}>
             <div bind:this={bottom} class="w-full flex justify-center items-center">
                 {#if intersecting}
                     <div

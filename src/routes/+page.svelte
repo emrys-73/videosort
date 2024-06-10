@@ -298,94 +298,6 @@
             </IntersectionObserver>
         </div>
 
-        <!-- Fourth row -->
-        <div class="w-full h-full md:flex-row flex-col gap-6 hidden">
-            <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
-                <IntersectionObserver element={f4} let:intersecting once={false}>
-                    <div bind:this={f4} class="w-full h-full">
-                        {#if intersecting} 
-                        <div
-                            transition:fade={{ delay: 0, duration: 1400, x: -800, y: 0, opacity: 0.01, easing: quintOut }}    
-                            class="w-full h-full flex flex-col gap-6 ">
-                            <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[40vh] justify-center items-center flex flex-col">
-                                <h4 class="w-full text-center items-center {gradient} font-semibold text-xl">
-                                    Seamless
-                                </h4>
-                                <h3 class="{gradient} font-semibold md:py-2 text-center">
-                                    Integrations
-                                </h3>
-            
-                                <div class="flex flex-row w-full h-full justify-center lg:gap-16 gap-6 py-6">
-                                    <img src="/davinci.png" alt="DaVinci">
-                                    <img src="/premiere.png" alt="Premiere">
-                                    <img src="/finalcut.png" alt="Final Cut">
-                                </div>
-            
-                            </div>
-                            <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex flex-col lg:p-8 p-6">
-                                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                                    Indexable
-                                </h4>
-            
-                                <h3 class="{gradient} font-semibold py-2 text-center">
-                                    Speech-To-Text Transcription
-                                </h3>
-            
-                            </div>
-                        </div>
-                        {/if}
-                    </div>
-                </IntersectionObserver>
-                
-            </div>
-            <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
-                <IntersectionObserver element={f5} let:intersecting once={false}>
-                    <div bind:this={f5} class="w-full h-full">
-                        {#if intersecting} 
-                            <div
-                                transition:fade={{ delay: 0, duration: 1400, x: 800, y: 0, opacity: 0.01, easing: quintOut }}    
-                                class="w-full h-full flex flex-col gap-6"
-                                >
-                                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[35vh] justify-center items-center gap-2 flex flex-col">
-
-                                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                                        Customise tags and categories
-                                    </h4>
-                
-                                    <div class="flex flex-row w-full h-full justify-center gap-1 md:gap-2 lg:gap-4 py-8">
-                                        {#each tags as tag}
-                                            <div
-                                                class="rounded-full w-16 h-16 lg:w-16 lg:h-16 bg-main dark:bg-[#292929] text-center flex justify-center items-center text-2xl xl:text-4xl"
-                                                >
-                                                {tag.content}
-                                            </div>
-                                        {/each}
-                                    </div>
-                
-                                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                                        For better organisation
-                                    </h4>
-                
-                                </div>
-                                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[30vh] justify-center items-center flex flex-col">
-                                    <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
-                                        Video Tagging and clustering, tailored to 
-                                    </h4>
-                    
-                                    <h3 class="{gradient} font-semibold py-2 text-center">
-                                        Your Workflow
-                                    </h3>
-                
-
-                                </div>
-                            </div>
-                        {/if}
-                    </div>
-                </IntersectionObserver>
-                
-            </div>
-        </div>
-
         <!-- Fifth Row -->
         <div class="w-full h-full gap-6 flex">
             <IntersectionObserver element={f6} let:intersecting once={true}>
@@ -393,7 +305,7 @@
                     {#if intersecting}
                         <div
                             transition:fade={{ delay: 0, duration: 1400, x: 0, y: -800, opacity: 0.01, easing: quintOut }}
-                            class="w-full h-full flex flex-col-reverse md:flex-row gap-6 "
+                            class="w-full h-full flex flex-col-reverse md:flex-row gap-6"
                             >
                             <div class="w-full h-auto rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6 lg:px-8 relative">
                                 <div class="absolute bg-main rounded-full px-6 py-1 text-sec font-semibold -top-2 -left-2 text-sm">

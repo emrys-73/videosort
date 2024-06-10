@@ -12,6 +12,8 @@
     import { quintOut, cubicInOut, quintInOut } from 'svelte/easing';
     import IntersectionObserver from "svelte-intersection-observer";
     import { onMount } from "svelte";
+    import GradientText from "$lib/components/typo/gradientText/gradientText.svelte";
+    import Subheader from "$lib/components/typo/subheader/subheader.svelte";
 
 
     let show;
@@ -90,6 +92,24 @@
         },
     ]
 
+
+    const getEmoji = (emojiContent) => {
+        switch (emojiContent) {
+            case '😂':
+                return "url('/joy.png')";
+            case '👌':
+                return "url('/ok.png')";
+            case '👀':
+                return "url('/eyes.png')";
+            case '🥰':
+                return "url('/love.png')";
+            case '💩':
+                return "url('/poop.png')";
+            default:
+                return "url('/joy.png')";
+        }
+    }
+
 </script>
 
 {#if show}
@@ -142,11 +162,11 @@
 </div>
 
 <div class="w-full h-full min-h-screen justify-start items-center flex flex-col overflow-hidden">
-   <div class="lg:w-4/5 w-full px-6 h-full flex flex-col gap-6 justify-center items-center">
+   <div class="lg:w-[90vw] xl:w-4/5 w-full px-6 h-full flex flex-col gap-6 justify-center items-center">
         <!-- First row -->
         <div class="w-full h-full flex lg:flex-row flex-col gap-6">
             
-            <div class="w-full min-h-[55vh]">
+            <div class="w-full min-h-[45vh]">
                 <IntersectionObserver element={f1} let:intersecting>
                     <div bind:this={f1} class="w-full h-full">
                       {#if intersecting}
@@ -155,16 +175,34 @@
                       class="w-full md:h-[55vh]"
                         >
                         <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl flex flex-col justify-center items-center p-6 py-10 lg:py-6">
-                            <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                            <Subheader size="sm">
                                 Automatically
-                            </h4>
-                            <h3 class="{gradient} text-transparent font-semibold py-2 text-center">
-                                Sort and Label
-                            </h3>
-                            <img src="/verses.png" alt="tags" class="py-6">
-                            <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                                tailored to your workflow
-                            </h4>
+                            </Subheader>
+                            <GradientText size="md">Sort and Label</GradientText>
+                            <div class="w-3/4 flex flex-col gap-4 justify-center items-start py-4 transition-all duration-500 ease-in-out">
+                                <div class="flex">
+                                    <div class="bg-main text-sec font-semibold rounded-full px-4 py-1 drop-shadow-md">
+                                        03:16 Crowd Cheering
+                                    </div>
+                                </div>
+                                <div class="flex flex-row w-full gap-2 justify-center">
+                                    <div class="bg-main text-sec font-semibold rounded-full px-4 py-1 drop-shadow-md">
+                                        02:42 Bread
+                                    </div>
+                                    <div class="bg-main text-sec font-semibold rounded-full px-4 py-1 drop-shadow-md">
+                                        41:10 Hands
+                                    </div>
+                                </div>
+                                <div class="flex w-full justify-end">
+                                    <div class="bg-main text-sec font-semibold rounded-full px-4 py-1 drop-shadow-md">
+                                        04:12 Boxing Gloves
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <img src="/verses.png" alt="tags" class="py-6"> -->
+                            <Subheader>
+                                *tailored to your workflow
+                            </Subheader>
                         </div>
                       </div>
                       {/if}
@@ -184,45 +222,44 @@
                             class="w-full flex flex-col gap-6 h-full">
                             <div 
                                 
-                                class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex-col p-6 flex transition-all duration-500 ease-in-out gap-4">
-                                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex-col p-6 flex transition-all duration-500 ease-in-out gap-1">
+                                <Subheader>
                                     Turn all your footage into
-                                </h4>
+                                </Subheader>
         
-                                <h3 class="{gradientSmall} justify-center items-center flex font-semibold w-full text-center">
-                                        Searchable text documents
-                                    </h3>
+                                <GradientText size="md">
+                                    Searchable text documents
+                                </GradientText>
 
-                                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                                        filtered by categories, people and voice tonality via indexible
-                                    </h4>
-
-                                    <h3 class="{gradientSmall} justify-center items-center flex font-semibold w-full text-center">
-                                        Speech-To-Text Transcription
-                                    </h3>
+                                <Subheader>
+                                    *filtered by categories, people and voice tonality
+                                </Subheader>
                                 
                             </div>
 
                             <div class="w-full h-full min-h-[25vh] flex flex-row gap-6">
-                                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[20vh] justify-center items-center gap-2 flex flex-col">
+                                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[20vh] justify-center items-center gap-4 flex flex-col">
 
-                                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                    <Subheader>
                                         Customise tags and categories
-                                    </h4>
+                                    </Subheader>
                 
-                                    <div class="flex flex-row w-full justify-center gap-1 md:gap-2 lg:gap-4 py-8">
+                                    <div class="flex flex-row w-full justify-center gap-1 md:gap-2 lg:gap-4">
                                         {#each tags as tag}
-                                            <div
-                                                class="rounded-full w-16 h-16 lg:w-16 lg:h-16 bg-main dark:bg-[#292929] text-center flex justify-center items-center text-2xl xl:text-4xl"
+                                        <ToggleConfetti toggleOnce relative={false}>
+                                            <Button slot="label"
+                                                class="rounded-full w-16 h-16 bg-main dark:hover:bg-main transition-all duration-500 ease-in-out dark:bg-[#292929] text-center flex justify-center items-center text-2xl xl:text-4xl"
                                                 >
                                                 {tag.content}
+                                            </Button>
+                                            
+                                            <!-- <Confetti size=30 amount=10 colorArray={[`${getEmoji(tag.content)}`]} /> -->
+                                            <div style="position: fixed; top: -50px; left: 0; height: 100vh; width: 100vw; display: flex; justify-content: center; overflow: hidden;">
+                                                <Confetti x={[-5, 5]} y={[0, 0.1]} size=30 colorArray={[`${getEmoji(tag.content)}`]} delay={[50, 4000]}  duration=3000 amount=200 fallDistance="100vh" />
                                             </div>
+                                        </ToggleConfetti>
                                         {/each}
                                     </div>
-                
-                                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                                        For better organisation
-                                    </h4>
                 
                                 </div>
                             
@@ -236,46 +273,8 @@
             </div>
         </div>
 
-        <!-- Second row -->
-        <div class="w-full h-full hidden flex-row gap-6 ">
-            
-            <div class="w-full flex flex-col gap-6">
-                <div class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[30vh] flex flex-col gap-2 justify-center items-center p-6">
-                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                        Up to
-                    </h4>
-
-                    <h3 class="{gradient} text-8xl font-semibold py-2 text-center">
-                        94%
-                    </h3>
-
-                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-lg md:text-xl">
-                        faster than manual labelling
-                    </h4>
-                </div>
-
-                <div class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[30vh] flex flex-col gap-6 justify-center items-center p-6">
-                    <h3 class="text-8xl text-center items-center flex justify-center">
-                        😋✌️
-                    </h3>
-                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                        Emotion Detection
-                    </h4>
-                </div>
-            </div>
-            <div class="w-full min-w-[60vw] h-auto rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center relative">
-                <img src="/macmock.png" alt="mac" class="h-2/3 absolute z-40">
-                <div class="w-[33.5vw] h-[34vh] absolute z-50 min-h-80 dark:bg-myBlack bg-myWhite rounded-2xl mb-10">
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <iframe src="/" frameborder="0" scrolling="no"
-                        class="w-full h-full p-2 flex justify-center items-center"
-                        />
-                </div>
-            </div>
-        </div>
-
         <!-- Third row -->
-        <div class="w-full h-[20vh] flex-row gap-6 flex">
+        <div class="w-full h-[25vh] flex-row gap-6 flex">
             <IntersectionObserver element={f3} let:intersecting once={false}>
                 <div bind:this={f3} class="w-full h-full">
                     {#if intersecting}
@@ -283,10 +282,10 @@
                             transition:fade={{ delay: 0, duration: 1400, x: 0, y: -800, opacity: 0.01, easing: quintOut }}
                             class="w-full"
                                 >
-                            <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-row justify-center items-center p-6 gap-6">
-                                <h3 class="{gradientBig} font-semibold py-2 text-center">
+                            <div class="w-full h-full min-h-[25vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-row justify-center items-center p-6 gap-6">
+                                <GradientText size="xl">
                                     94%
-                                </h3>
+                                </GradientText>
                                 <h4 class=" font-semibold tracking-wider text-main dark:text-main text-lg md:text-xl lg:text-2xl xl:text-3xl">
                                     Faster than manual labelling
                                     <br>
@@ -388,33 +387,42 @@
         </div>
 
         <!-- Fifth Row -->
-        <div class="w-full h-full flex-row gap-6 flex">
+        <div class="w-full h-full gap-6 flex">
             <IntersectionObserver element={f6} let:intersecting once={true}>
                 <div bind:this={f6} class="w-full h-full">
                     {#if intersecting}
                         <div
                             transition:fade={{ delay: 0, duration: 1400, x: 0, y: -800, opacity: 0.01, easing: quintOut }}
-                            class="w-full h-full flex flex-row gap-6 "
+                            class="w-full h-full flex flex-col-reverse md:flex-row gap-6 "
                             >
-                            <div class="w-full h-auto rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
-                                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                            <div class="w-full h-auto rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6 lg:px-8 relative">
+                                <div class="absolute bg-main rounded-full px-6 py-1 text-sec font-semibold -top-2 -left-2 text-sm">
+                                    Coming soon
+                                </div>
+                                <Subheader>
                                     Generative AI agents use your briefings achieving
-                                </h4>
+                                </Subheader>
 
-                                <h3 class="{gradient} font-semibold py-2 text-center">
-                                    Fully automated edits in seconds
-                                </h3>
+                                <GradientText>
+                                    Automatic rough cuts <br> in seconds
+                                </GradientText>
                 
                             </div>
-                            <div class="w-[40vw] h-full min-h-[25vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6 gap-10">
-                                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                            <div class="md:w-[40vw] w-full h-full min-h-[25vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6 gap-6">
+                                <Subheader>
                                     Seamless integrations with
-                                </h4>
+                                </Subheader>
 
-                                <div class="flex flex-row w-full h-full justify-center lg:gap-16 gap-6">
-                                    <img src="/davinci.png" alt="DaVinci">
-                                    <img src="/premiere.png" alt="Premiere">
-                                    <img src="/finalcut.png" alt="Final Cut">
+                                <div class="flex flex-row w-full h-full justify-center xl:gap-8 gap-2 lg:gap-6">
+                                    <a href="https://www.blackmagicdesign.com/products/davinciresolve">
+                                    <img src="/davinci.png" alt="DaVinci" class="scale-75 lg:scale-100 hover:scale-95 lg:hover:scale-110 transition-all duration-500 ease-in-out">
+                                    </a>
+                                    <a href="https://www.adobe.com/products/premiere.html">
+                                        <img src="/premiere.png" alt="Premiere" class="scale-75 lg:scale-100 hover:scale-95 lg:hover:scale-110 transition-all duration-500 ease-in-out">
+                                    </a>
+                                    <a href="https://www.apple.com/final-cut-pro/">
+                                        <img src="/finalcut.png" alt="Final Cut" class="scale-75 lg:scale-100 hover:scale-95 lg:hover:scale-110 transition-all duration-500 ease-in-out">
+                                    </a>
                                 </div>
 
                             </div>

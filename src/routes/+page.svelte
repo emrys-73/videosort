@@ -276,7 +276,7 @@
         </div>
 
         <!-- Third row -->
-        <div class="w-full h-[15vh] flex-row gap-6 flex">
+        <div class="w-full min-h-[15vh] flex-row gap-6 flex">
             <IntersectionObserver element={f3} let:intersecting once={false}>
                 <div bind:this={f3} class="w-full h-full">
                     {#if intersecting}
@@ -301,7 +301,7 @@
         </div>
 
         <!-- Fifth Row -->
-        <div class="w-full h-full gap-6 flex min-h-[50vh] md:min-h-[25vh] ">
+        <div class="w-full h-full gap-6 flex min-h-[50vh] md:min-h-[25vh]">
             <IntersectionObserver element={f6} let:intersecting once={true}>
                 <div bind:this={f6} class="w-full h-full">
                     {#if intersecting}
@@ -348,7 +348,7 @@
 </div>
 
     <div class="w-full flex flex-col text-center justify-center items-center h-[100vh] px-6 gap-4 relative">
-        <img class="absolute top-0 w-full h-full z-10 opacity-15" src="/bg.gif" alt="bg"  muted autoplay loop playsinline disablepictureinpicture/>
+        <img class="absolute top-0 w-full h-full z-10 opacity-15 object-cover" src="/bg.gif" alt="bg"  muted autoplay loop playsinline disablepictureinpicture/>
         <IntersectionObserver element={bottom} let:intersecting once={true}>
             <div bind:this={bottom} class="w-full flex justify-center items-center z-30">
                 {#if intersecting}

@@ -117,7 +117,7 @@
     transition:fade={{ delay: 300, duration: 1000 }}
     class="w-full h-full min-h-screen  flex flex-col justify-center items-center gap-4">
     <div class="w-full h-[95vh] justify-center items-center flex flex-col relative gap-4">
-        <video class="absolute top-0 w-full h-full z-10 opacity-15" src="/hero.mp4" type="video/mp4" muted autoplay loop playsinline disablepictureinpicture/>
+        <video class="absolute top-0 w-full h-full z-10 opacity-15" src="/hero2.mp4" type="video/mp4" muted autoplay loop playsinline disablepictureinpicture/>
         <!-- <video class="absolute w-full h-full object-cover z-0" muted autoplay loop playsinline disablepictureinpicture>
 			<source src="https://www.youtube.com/watch?v=OOnECHfc6RQ" type="video/mp4" />
 		</video> -->

@@ -63,6 +63,8 @@
     let f7;
     let f8;
 
+    let subheader;
+
 
     let title;
     let bottom;
@@ -148,13 +150,27 @@
 </div>
 
 
-<div class="w-full h-[50vh] bg-red-500 flex-col justify-center items-center hidden">
-
-    <div class="w-3/4 border-l-2 border-white h-auto">
-        <h2>
-
-        </h2>
-    </div>
+<div class="w-full h-[50vh] flex-col justify-center items-center flex">
+    <IntersectionObserver element={title} let:intersecting once={false}>
+        <div bind:this={title} class="w-full h-full flex">
+            {#if intersecting}
+                <div
+                    transition:fly={{ delay: 400, duration: 1400, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
+                    class="w-full flex flex-col justify-center items-center"
+                    >
+                    <div class="w-3/4 border-l-[12px] border-sec h-auto flex flex-col gap-4 py-2">
+                        <h2 class="text-2xl xl:text-6xl lg:text-7xl font-semibold text-sec px-4">
+                            "Labelling and sorting footage is the most boring thing in the world."
+                        </h2>
+                        <span class="text-sm italic text-sec px-4 md:text-2xl">
+                            - Every Filmmaker, every Content Creator, ever.
+                        </span>
+                    </div>
+                </div>
+            {/if}
+        </div>
+    </IntersectionObserver>
+    
 </div>
 
 <div class="w-full h-full min-h-screen justify-start items-center flex flex-col overflow-hidden py-2 md:py-20">

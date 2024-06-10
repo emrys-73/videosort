@@ -158,11 +158,11 @@
                     transition:fly={{ delay: 400, duration: 1400, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
                     class="w-full flex flex-col justify-center items-center"
                     >
-                    <div class="w-3/4 border-l-[12px] border-sec h-auto flex flex-col gap-4 py-2">
-                        <h2 class="text-2xl xl:text-6xl lg:text-7xl font-semibold text-sec px-4">
+                    <div class="w-3/4 border-l-[12px] border-main h-auto flex flex-col gap-4 py-2">
+                        <h2 class="text-2xl xl:text-6xl lg:text-7xl font-semibold text-main px-4">
                             "Labelling and sorting footage is the most boring thing in the world."
                         </h2>
-                        <span class="text-sm italic text-sec px-4 md:text-2xl">
+                        <span class="text-sm italic text-main px-4 md:text-2xl">
                             - Every Filmmaker, every Content Creator, ever.
                         </span>
                     </div>

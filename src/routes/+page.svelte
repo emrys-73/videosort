@@ -208,16 +208,13 @@
                                 <div 
                                     
                                     class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex-col p-6 flex transition-all duration-500 ease-in-out gap-1">
-                                    <Subheader>
-                                        Turn all your footage into
-                                    </Subheader>
             
                                     <GradientText size="md">
-                                        Searchable text documents
+                                        Find any clip you are looking for in seconds
                                     </GradientText>
 
                                     <Subheader>
-                                        *filtered by categories, people and voice tonality
+                                        via searchable footage transcripts and categories
                                     </Subheader>
                                     
                                 </div>
@@ -254,7 +251,7 @@
         </div>
 
         <!-- Third row -->
-        <div class="w-full h-[25vh] flex-row gap-6 flex">
+        <div class="w-full h-[15vh] flex-row gap-6 flex">
             <IntersectionObserver element={f3} let:intersecting once={false}>
                 <div bind:this={f3} class="w-full h-full">
                     {#if intersecting}
@@ -262,15 +259,15 @@
                             transition:fade={{ delay: 0, duration: 1400, x: 0, y: -800, opacity: 0.01, easing: quintOut }}
                             class="w-full"
                                 >
-                            <div class="w-full h-full min-h-[25vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-row justify-center items-center p-6 gap-6">
-                                <GradientText size="xl">
-                                    94%
+                            <div class="w-full h-full min-h-[15vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-row justify-center items-center p-6 gap-6">
+                                <GradientText size="lg">
+                                    Label 10 Hours of Footage in 10 Minutes
                                 </GradientText>
-                                <h4 class=" font-semibold tracking-wider text-main dark:text-main text-lg md:text-xl lg:text-2xl xl:text-3xl">
+                                <!-- <h4 class=" font-semibold tracking-wider text-main dark:text-main text-lg md:text-xl lg:text-2xl xl:text-3xl">
                                     Faster than manual labelling
                                     <br>
                                     and with higher accuracy
-                                </h4>
+                                </h4> -->
                             </div>
                         </div>
                     {/if}

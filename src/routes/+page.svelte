@@ -171,6 +171,9 @@
         </div>
     </IntersectionObserver>
     
+    <div>
+        <img src="/arrow.png" alt="arr">
+    </div>
 </div>
 
 <div class="w-full h-full min-h-screen justify-start items-center flex flex-col overflow-hidden py-2 md:py-20">

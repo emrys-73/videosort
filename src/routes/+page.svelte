@@ -119,9 +119,9 @@
 <div
     transition:fade={{ delay: 300, duration: 1000 }}
     class="w-full h-full min-h-screen  flex flex-col justify-center items-center gap-4">
-    <div class="w-full h-[95vh] justify-center items-center flex flex-col relative gap-4">
+    <div class="w-full h-[100vh] justify-center items-center flex flex-col relative gap-4">
         <video class="absolute top-0 w-full h-full z-10 opacity-15" src="/hero2.mp4" type="video/mp4" muted autoplay loop playsinline disablepictureinpicture/>    
-    <div class="py-4 px-6 z-50">
+    <div class="py-4 px-6 z-40">
         <IntersectionObserver element={title} let:intersecting once={true}>
             <div bind:this={title}>
                 {#if intersecting}
@@ -137,7 +137,7 @@
         </IntersectionObserver>
     </div>
 
-    <div class="flex flex-row gap-2 justify-center items-center py-8 z-50">
+    <div class="flex flex-row gap-2 justify-center items-center py-8 z-40">
         <div class="hidden">
             <Input placeholder="Enter your email" label="Email" class="min-w-[20vw]" />
         </div>
@@ -151,15 +151,15 @@
 </div>
 
 
-<div class="w-full h-[50vh] flex-col justify-center items-center flex">
+<div class="w-full h-[40vh] flex-col justify-center items-center flex">
     <IntersectionObserver element={subheader} let:intersecting once={false}>
-        <div bind:this={subheader} class="w-full h-full flex">
+        <div bind:this={subheader} class="w-full flex">
             {#if intersecting}
                 <div
                     transition:fade={{ delay: 400, duration: 1400, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
                     class="w-full flex flex-col justify-center items-center"
                     >
-                    <div class="w-3/4 border-l-[12px] border-main h-auto flex flex-col gap-4 py-2">
+                    <div class="w-3/4 border-l-[12px] border-main flex flex-col gap-4 py-2">
                         <h2 class="text-2xl xl:text-6xl lg:text-7xl font-semibold text-main px-4">
                             "Labelling and sorting footage is the most boring thing in the world."
                         </h2>
@@ -172,12 +172,12 @@
         </div>
     </IntersectionObserver>
     
-    <div class="flex flex-col gap-6 h-[80vh] justify-center items-center">
+    <div class="flex flex-col gap-6 min-h-[10vh] justify-center items-center w-full">
         <IntersectionObserver element={arrow} let:intersecting once={false}>
-            <div bind:this={arrow} class="w-full h-full flex">
+            <div bind:this={arrow} class="w-full h-full flex justify-center items-center py-20 xl:py-40">
                 {#if intersecting}
                     <div
-                        transition:fade={{ delay: 200, duration: 1400, x: 0, y: 800, opacity: 0.01, easing: quintOut }}
+                        transition:fade={{ delay: 400, duration: 1400, x: 0, y: 800, opacity: 0.01, easing: quintOut }}
                         class="flex flex-col gap-4 justify-center items-center"
                         >
                         <span class="text-main font-semibold text-xl">

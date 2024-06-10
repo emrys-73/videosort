@@ -179,7 +179,7 @@
                                 Automatically
                             </Subheader>
                             <GradientText size="md">Sort and Label</GradientText>
-                            <div class="w-3/4 flex flex-col gap-4 justify-center items-start py-4 transition-all duration-500 ease-in-out">
+                            <div class="md:w-3/4 w-4/5 flex flex-col gap-4 justify-center items-start py-4 transition-all duration-500 ease-in-out">
                                 <div class="flex">
                                     <div class="bg-main text-sec font-semibold rounded-full px-4 py-1 drop-shadow-md">
                                         03:16 Crowd Cheering

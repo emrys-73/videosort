@@ -25,7 +25,7 @@
 </script>
 
 
-<h3 class="{getSize(size)} bg-gradient-to-r from-sec to-main text-transparent bg-clip-text font-semibold text-center">
+<h3 class="{getSize(size)} bg-gradient-to-r from-sec to-main text-transparent bg-clip-text font-semibold text-center xl:py-2">
     <slot/>
 </h3>
 

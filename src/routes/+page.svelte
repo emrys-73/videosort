@@ -64,6 +64,7 @@
     let f8;
 
     let subheader;
+    let arrow;
 
 
     let title;
@@ -151,8 +152,8 @@
 
 
 <div class="w-full h-[50vh] flex-col justify-center items-center flex">
-    <IntersectionObserver element={title} let:intersecting once={false}>
-        <div bind:this={title} class="w-full h-full flex">
+    <IntersectionObserver element={subheader} let:intersecting once={false}>
+        <div bind:this={subheader} class="w-full h-full flex">
             {#if intersecting}
                 <div
                     transition:fly={{ delay: 400, duration: 1400, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
@@ -171,8 +172,22 @@
         </div>
     </IntersectionObserver>
     
-    <div>
-        <img src="/arrow.png" alt="arr">
+    <div class="flex flex-col gap-6 h-[80vh] justify-center items-center">
+        <IntersectionObserver element={arrow} let:intersecting once={false}>
+            <div bind:this={arrow} class="w-full h-full flex">
+                {#if intersecting}
+                    <div
+                        transition:fly={{ delay: 200, duration: 1400, x: 0, y: 800, opacity: 0.01, easing: quintOut }}
+                        class="flex flex-col gap-4 justify-center items-center"
+                        >
+                        <span class="text-main font-semibold text-xl">
+                            Let's fix that
+                        </span>
+                        <img src="/ari.png" alt="arr" class="scale-75">
+                    </div>
+                {/if}
+            </div>
+        </IntersectionObserver>
     </div>
 </div>
 

@@ -299,7 +299,7 @@
         </div>
 
         <!-- Fifth Row -->
-        <div class="w-full h-full gap-6 flex min-h-[50vh] md:min-h-[25vh] bg-red-500">
+        <div class="w-full h-full gap-6 flex min-h-[50vh] md:min-h-[25vh] ">
             <IntersectionObserver element={f6} let:intersecting once={true}>
                 <div bind:this={f6} class="w-full h-full">
                     {#if intersecting}

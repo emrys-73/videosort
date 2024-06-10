@@ -117,12 +117,7 @@
     transition:fade={{ delay: 300, duration: 1000 }}
     class="w-full h-full min-h-screen  flex flex-col justify-center items-center gap-4">
     <div class="w-full h-[95vh] justify-center items-center flex flex-col relative gap-4">
-        <video class="absolute top-0 w-full h-full z-10 opacity-15" src="/hero2.mp4" type="video/mp4" muted autoplay loop playsinline disablepictureinpicture/>
-        <!-- <video class="absolute w-full h-full object-cover z-0" muted autoplay loop playsinline disablepictureinpicture>
-			<source src="https://www.youtube.com/watch?v=OOnECHfc6RQ" type="video/mp4" />
-		</video> -->
-
-    
+        <video class="absolute top-0 w-full h-full z-10 opacity-15" src="/hero2.mp4" type="video/mp4" muted autoplay loop playsinline disablepictureinpicture/>    
     <div class="py-4 px-6 z-50">
         <IntersectionObserver element={title} let:intersecting once={true}>
             <div bind:this={title}>
@@ -132,7 +127,7 @@
                         >
                         <h1 class="scroll-m-20 {headerGradient ? gradient : 'text-main'} font-bold text-5xl lg:text-7xl text-center">
                             AI-Driven Footage Sorting <br>
-                            for Film Makers and Content Creators
+                            for Filmmakers and Content Creators
                         </h1>
                     </div>
                 {/if}
@@ -144,15 +139,7 @@
         <div class="hidden">
             <Input placeholder="Enter your email" label="Email" class="min-w-[20vw]" />
         </div>
-
-        <!-- <ToggleConfetti toggleOnce relative={false}>
-            <Button href="https://tally.so/r/3NVJ4j" slot="label" class="w-[20vw] rounded-full">Join Waitlist</Button>
-        
-            <div style="position: fixed; top: -50px; left: 0; height: 100vh; width: 100vw; display: flex; justify-content: center; overflow: hidden;">
-                <Confetti x={[-5, 5]} y={[0, 0.1]} delay={[500, 2000]}  infinite duration=5000 amount=200 fallDistance="100vh" />
-            </div>
-        </ToggleConfetti> -->
-        <Button href="https://tally.so/r/3NVJ4j" slot="label" target="_blank" class="min-w-[20vw] hover:min-w-[30vw] transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl dark:hover:text-sec dark:hover:border-sec hover:bg-transparent px-6">Join Waitlist</Button>
+        <Button href="https://tally.so/r/3NVJ4j" slot="label" target="_blank" class="min-w-[20vw] hover:min-w-[30vw] transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl dark:hover:text-sec dark:hover:border-sec hover:bg-transparent px-6">Join the Waitlist</Button>
     </div>
 
     <div class="absolute bottom-6 dark:text-sec text-main breathe mb-16 sm:mb-0">
@@ -199,7 +186,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <img src="/verses.png" alt="tags" class="py-6"> -->
                             <Subheader>
                                 *tailored to your workflow
                             </Subheader>
@@ -216,59 +202,53 @@
                     <div bind:this={f2}
                         class="w-full h-full">
                         {#if intersecting}
-
-                        <div
-                        transition:fade={{ delay: 0, duration: 1400, x: 800, y: 0, opacity: 0.01, easing: quintOut }}
-                            class="w-full flex flex-col gap-6 h-full">
-                            <div 
-                                
-                                class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex-col p-6 flex transition-all duration-500 ease-in-out gap-1">
-                                <Subheader>
-                                    Turn all your footage into
-                                </Subheader>
-        
-                                <GradientText size="md">
-                                    Searchable text documents
-                                </GradientText>
-
-                                <Subheader>
-                                    *filtered by categories, people and voice tonality
-                                </Subheader>
-                                
-                            </div>
-
-                            <div class="w-full h-full min-h-[25vh] flex flex-row gap-6">
-                                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[20vh] justify-center items-center gap-4 flex flex-col">
+                            <div
+                            transition:fade={{ delay: 0, duration: 1400, x: 800, y: 0, opacity: 0.01, easing: quintOut }}
+                                class="w-full flex flex-col gap-6 h-full">
+                                <div 
+                                    
+                                    class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex-col p-6 flex transition-all duration-500 ease-in-out gap-1">
+                                    <Subheader>
+                                        Turn all your footage into
+                                    </Subheader>
+            
+                                    <GradientText size="md">
+                                        Searchable text documents
+                                    </GradientText>
 
                                     <Subheader>
-                                        Customise tags and categories
+                                        *filtered by categories, people and voice tonality
                                     </Subheader>
-                
-                                    <div class="flex flex-row w-full justify-center gap-1 md:gap-2 lg:gap-4">
-                                        {#each tags as tag}
-                                        <ToggleConfetti toggleOnce relative={false}>
-                                            <Button slot="label"
-                                                class="rounded-full w-16 h-16 bg-main dark:hover:bg-main transition-all duration-500 ease-in-out dark:bg-[#292929] text-center flex justify-center items-center text-2xl xl:text-4xl"
-                                                >
-                                                {tag.content}
-                                            </Button>
-                                            
-                                            <!-- <Confetti size=30 amount=10 colorArray={[`${getEmoji(tag.content)}`]} /> -->
-                                            <div style="position: fixed; top: -50px; left: 0; height: 100vh; width: 100vw; display: flex; justify-content: center; overflow: hidden;">
-                                                <Confetti x={[-5, 5]} y={[0, 0.1]} size=30 colorArray={[`${getEmoji(tag.content)}`]} delay={[50, 4000]}  duration=3000 amount=200 fallDistance="100vh" />
-                                            </div>
-                                        </ToggleConfetti>
-                                        {/each}
-                                    </div>
-                
+                                    
                                 </div>
-                            
-                        </div> 
 
-                    </div>
-                {/if}
-                    </div>
+                                <div class="w-full h-full min-h-[25vh] flex flex-row gap-6">
+                                    <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[20vh] justify-center items-center gap-4 flex flex-col">
 
+                                        <Subheader>
+                                            Customise tags and categories
+                                        </Subheader>
+                    
+                                        <div class="flex flex-row w-full justify-center gap-1 md:gap-2 lg:gap-4">
+                                            {#each tags as tag}
+                                                <ToggleConfetti toggleOnce relative={false}>
+                                                    <Button slot="label"
+                                                        class="rounded-full w-16 h-16 bg-main dark:hover:bg-main transition-all duration-500 ease-in-out dark:bg-[#292929] text-center flex justify-center items-center text-2xl xl:text-4xl"
+                                                        >
+                                                        {tag.content}
+                                                    </Button>
+                                                    
+                                                    <div style="position: fixed; top: -50px; left: 0; height: 100vh; width: 100vw; display: flex; justify-content: center; overflow: hidden;">
+                                                        <Confetti x={[-5, 5]} y={[0, 0.1]} size=30 colorArray={[`${getEmoji(tag.content)}`]} delay={[50, 4000]}  duration=3000 amount=200 fallDistance="100vh" />
+                                                    </div>
+                                                </ToggleConfetti>
+                                            {/each}
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        {/if}
+                    </div>
                 </IntersectionObserver>
             </div>
         </div>
@@ -336,17 +316,12 @@
                                         <img src="/finalcut.png" alt="Final Cut" class="scale-75 lg:scale-100 hover:scale-95 lg:hover:scale-110 transition-all duration-500 ease-in-out">
                                     </a>
                                 </div>
-
                             </div>
-                            
                         </div>
                     {/if}
                 </div>
             </IntersectionObserver>
-            
         </div>
-
-
    </div>
 </div>
 
@@ -365,8 +340,7 @@
                 {/if}
             </div>
         </IntersectionObserver>
-        <Button href="https://tally.so/r/3NVJ4j" slot="label" target="_blank" class="min-w-[20vw] z-30 hover:min-w-[30vw] transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl dark:hover:text-sec dark:hover:border-sec hover:bg-transparent px-6">Join Waitlist</Button>
+        <Button href="https://tally.so/r/3NVJ4j" slot="label" target="_blank" class="min-w-[20vw] hover:min-w-[30vw] transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl dark:hover:text-sec dark:hover:border-sec hover:bg-transparent px-6">Join the Waitlist</Button>
     </div>
-
 </div>
 {/if}

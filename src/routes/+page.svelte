@@ -374,7 +374,7 @@
                         transition:fade={{ delay: 300, duration: 1000 }}
                         class="md:w-3/4 ">
                         <span class="md:w-3/5 w-full text-center text-xl md:text-2xl lg:text-3xl font-medium text-main dark:text-main">
-                            We believe that the future of software should allow creators to focus less on tedious tasks and more on telling great stories. Our first step: Labelling and sorting footage is one of the most boring things in the world. This automates that.
+                            We believe that the future of software should allow creators to focus less on tedious tasks and more on telling great stories. Our first step: automating the boring process called labelling and sorting footage, and allowing creators to go directly from filming to shaping stories.
                         </span>
                     </div>
                 {/if}

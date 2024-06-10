@@ -156,7 +156,7 @@
         <div bind:this={subheader} class="w-full h-full flex">
             {#if intersecting}
                 <div
-                    transition:fly={{ delay: 400, duration: 1400, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
+                    transition:fade={{ delay: 400, duration: 1400, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
                     class="w-full flex flex-col justify-center items-center"
                     >
                     <div class="w-3/4 border-l-[12px] border-main h-auto flex flex-col gap-4 py-2">
@@ -177,7 +177,7 @@
             <div bind:this={arrow} class="w-full h-full flex">
                 {#if intersecting}
                     <div
-                        transition:fly={{ delay: 200, duration: 1400, x: 0, y: 800, opacity: 0.01, easing: quintOut }}
+                        transition:fade={{ delay: 200, duration: 1400, x: 0, y: 800, opacity: 0.01, easing: quintOut }}
                         class="flex flex-col gap-4 justify-center items-center"
                         >
                         <span class="text-main font-semibold text-xl">

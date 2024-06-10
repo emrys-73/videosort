@@ -126,8 +126,7 @@
                         transition:fade={{ delay: 200, duration: 1000 }}
                         >
                         <h1 class="scroll-m-20 {headerGradient ? gradient : 'text-main'} font-bold text-5xl lg:text-7xl text-center">
-                            AI-Driven Footage Sorting <br>
-                            for Filmmakers and Content Creators
+                            Automatic Footage Sorting and Labelling for Filmmakers and Content Creators
                         </h1>
                     </div>
                 {/if}
@@ -146,6 +145,16 @@
         Scroll to explore
     </div>
 
+</div>
+
+
+<div class="w-full h-[50vh] bg-red-500 flex-col justify-center items-center hidden">
+
+    <div class="w-3/4 border-l-2 border-white h-auto">
+        <h2>
+
+        </h2>
+    </div>
 </div>
 
 <div class="w-full h-full min-h-screen justify-start items-center flex flex-col overflow-hidden py-2 md:py-20">
@@ -331,7 +340,7 @@
                         transition:fade={{ delay: 300, duration: 1000 }}
                         class="md:w-3/4 ">
                         <span class="md:w-3/5 w-full text-center text-xl md:text-2xl lg:text-3xl font-medium text-main dark:text-main">
-                            Simplify Your Workflow, Maximize Your Creativity. Effortlessly Manage and Organize Large Video Footage Volumes with AI-Powered Automation that sorts and labels your video footage for you.
+                            We believe that the future of software should allow creators to focus less on tedious tasks and more on telling great stories. Our first step: Labelling and sorting footage is one of the most boring things in the world. This automates that.
                         </span>
                     </div>
                 {/if}

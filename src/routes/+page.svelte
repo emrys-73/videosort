@@ -96,7 +96,7 @@
 <div
     transition:fade={{ delay: 300, duration: 1000 }}
     class="w-full h-full min-h-screen  flex flex-col justify-center items-center gap-4">
-    <div class="w-full h-[90vh] justify-center items-center flex flex-col relative gap-4">
+    <div class="w-full h-[95vh] justify-center items-center flex flex-col relative gap-4">
         <video class="absolute top-0 w-full h-full z-10 opacity-15" src="/hero.mp4" type="video/mp4" muted autoplay loop playsinline disablepictureinpicture/>
         <!-- <video class="absolute w-full h-full object-cover z-0" muted autoplay loop playsinline disablepictureinpicture>
 			<source src="https://www.youtube.com/watch?v=OOnECHfc6RQ" type="video/mp4" />
@@ -146,22 +146,25 @@
         <!-- First row -->
         <div class="w-full h-full flex lg:flex-row flex-col gap-6">
             
-            <div class="w-full min-h-[50vh]">
+            <div class="w-full min-h-[55vh]">
                 <IntersectionObserver element={f1} let:intersecting>
-                    <div bind:this={f1}>
+                    <div bind:this={f1} class="w-full h-full">
                       {#if intersecting}
                       <div
                       transition:fade={{ delay: 0, duration: 1400, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
-                      class="w-full md:h-[50vh]"
+                      class="w-full md:h-[55vh]"
                         >
                         <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl flex flex-col justify-center items-center p-6 py-10 lg:py-6">
                             <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                                AI-Powered
+                                Automatically
                             </h4>
                             <h3 class="{gradient} text-transparent font-semibold py-2 text-center">
-                                Sorting and Labelling
+                                Sort and Label
                             </h3>
-                            <img src="/verses.png" alt="tags" class="pt-6">
+                            <img src="/verses.png" alt="tags" class="py-6">
+                            <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                tailored to your workflow
+                            </h4>
                         </div>
                       </div>
                       {/if}
@@ -170,7 +173,7 @@
             </div>
             
 
-            <div class="w-full h-[50vh] flex flex-col gap-6">
+            <div class="w-full h-[55vh] flex flex-col gap-6">
                 <IntersectionObserver element={f2} let:intersecting>
                     <div bind:this={f2}
                         class="w-full h-full">
@@ -181,30 +184,48 @@
                             class="w-full flex flex-col gap-6 h-full">
                             <div 
                                 
-                                class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex-col p-6 flex transition-all duration-500 ease-in-out">
+                                class="w-full h-auto dark:bg-myGray bg-myLightGray rounded-3xl min-h-[25vh] justify-center items-center flex-col p-6 flex transition-all duration-500 ease-in-out gap-4">
+                                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                    Turn all your footage into
+                                </h4>
         
-                                <h3 class="{gradient} justify-center items-center flex font-semibold h-full w-full py-2 text-center">
-                                        Industry-leading AI video indexing engine
+                                <h3 class="{gradientSmall} justify-center items-center flex font-semibold w-full text-center">
+                                        Searchable text documents
                                     </h3>
+
+                                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                        filtered by categories, people and voice tonality via indexible
+                                    </h4>
+
+                                    <h3 class="{gradientSmall} justify-center items-center flex font-semibold w-full text-center">
+                                        Speech-To-Text Transcription
+                                    </h3>
+                                
                             </div>
 
-                            <div class="w-full h-full min-h-[20vh] flex flex-row gap-6">
-                                <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center p-6">
+                            <div class="w-full h-full min-h-[25vh] flex flex-row gap-6">
+                                <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[20vh] justify-center items-center gap-2 flex flex-col">
+
                                     <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                                        Auto-generated
+                                        Customise tags and categories
                                     </h4>
-                                    <h3 class="{gradient} font-semibold py-2 text-center">
-                                        Library
-                                    </h3>
+                
+                                    <div class="flex flex-row w-full justify-center gap-1 md:gap-2 lg:gap-4 py-8">
+                                        {#each tags as tag}
+                                            <div
+                                                class="rounded-full w-16 h-16 lg:w-16 lg:h-16 bg-main dark:bg-[#292929] text-center flex justify-center items-center text-2xl xl:text-4xl"
+                                                >
+                                                {tag.content}
+                                            </div>
+                                        {/each}
+                                    </div>
+                
+                                    <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                        For better organisation
+                                    </h4>
+                
                                 </div>
-                            <div class="dark:bg-myGray bg-myLightGray rounded-3xl w-full h-auto flex flex-col justify-center items-center gap-6 p-6">
-                                <h3 class="text-4xl sm:text-5xl lg:text-6xl xl:text-8xl text-center items-center flex justify-center">
-                                    🙋‍♂️
-                                </h3>
-                                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                                    Face Recognition
-                                </h4>
-                            </div>
+                            
                         </div> 
 
                     </div>
@@ -254,8 +275,8 @@
         </div>
 
         <!-- Third row -->
-        <div class="w-full h-full flex-row gap-6 flex">
-            <IntersectionObserver element={f3} let:intersecting once={true}>
+        <div class="w-full h-[20vh] flex-row gap-6 flex">
+            <IntersectionObserver element={f3} let:intersecting once={false}>
                 <div bind:this={f3} class="w-full h-full">
                     {#if intersecting}
                         <div
@@ -279,9 +300,9 @@
         </div>
 
         <!-- Fourth row -->
-        <div class="w-full h-full flex md:flex-row flex-col gap-6">
+        <div class="w-full h-full md:flex-row flex-col gap-6 hidden">
             <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
-                <IntersectionObserver element={f4} let:intersecting once={true}>
+                <IntersectionObserver element={f4} let:intersecting once={false}>
                     <div bind:this={f4} class="w-full h-full">
                         {#if intersecting} 
                         <div
@@ -319,7 +340,7 @@
                 
             </div>
             <div class="w-full h-full min-h-[60vh] flex flex-col gap-6">
-                <IntersectionObserver element={f5} let:intersecting once={true}>
+                <IntersectionObserver element={f5} let:intersecting once={false}>
                     <div bind:this={f5} class="w-full h-full">
                         {#if intersecting} 
                             <div
@@ -329,7 +350,7 @@
                                 <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl min-h-[35vh] justify-center items-center gap-2 flex flex-col">
 
                                     <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
-                                        Customisable tags and categories
+                                        Customise tags and categories
                                     </h4>
                 
                                     <div class="flex flex-row w-full h-full justify-center gap-1 md:gap-2 lg:gap-4 py-8">
@@ -373,16 +394,31 @@
                     {#if intersecting}
                         <div
                             transition:fade={{ delay: 0, duration: 1400, x: 0, y: -800, opacity: 0.01, easing: quintOut }}
+                            class="w-full h-full flex flex-row gap-6 "
                             >
-                            <div class="w-full h-full min-h-[20vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
-                                <h3 class="{gradient} font-semibold py-2 text-center">
-                                    Generative AI Agents
-                                </h3>
-                                <h4 class="w-full text-center items-center {gradientSmall} font-semibold">
-                                    to create a rough cut based on your footage & briefing
+                            <div class="w-full h-auto rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6">
+                                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                    Generative AI agents use your briefings achieving
                                 </h4>
+
+                                <h3 class="{gradient} font-semibold py-2 text-center">
+                                    Fully automated edits in seconds
+                                </h3>
                 
                             </div>
+                            <div class="w-[40vw] h-full min-h-[25vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-col justify-center items-center p-6 gap-10">
+                                <h4 class="w-full text-center items-center dark:text-sec text-main font-semibold text-xl">
+                                    Seamless integrations with
+                                </h4>
+
+                                <div class="flex flex-row w-full h-full justify-center lg:gap-16 gap-6">
+                                    <img src="/davinci.png" alt="DaVinci">
+                                    <img src="/premiere.png" alt="Premiere">
+                                    <img src="/finalcut.png" alt="Final Cut">
+                                </div>
+
+                            </div>
+                            
                         </div>
                     {/if}
                 </div>
@@ -429,7 +465,7 @@
 
     </div>
 
-    <div class="w-full flex flex-col text-center justify-center items-center min-h-[90vh] px-6 gap-4">
+    <div class="w-full flex flex-col text-center justify-center items-center h-[90vh] px-6 gap-4">
         <IntersectionObserver element={bottom} let:intersecting once={true}>
             <div bind:this={bottom} class="w-full flex justify-center items-center">
                 {#if intersecting}

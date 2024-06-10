@@ -166,13 +166,13 @@
         <!-- First row -->
         <div class="w-full h-full flex lg:flex-row flex-col gap-6">
             
-            <div class="w-full min-h-[45vh]">
+            <div class="w-full md:min-h-[55vh] min-h-[45vh]">
                 <IntersectionObserver element={f1} let:intersecting>
                     <div bind:this={f1} class="w-full h-full">
                       {#if intersecting}
                       <div
                       transition:fade={{ delay: 0, duration: 1400, x: -1200, y: 0, opacity: 0.01, easing: quintOut }}
-                      class="w-full md:h-[55vh]"
+                      class="w-full md:h-[55vh] h-[45vh]"
                         >
                         <div class="w-full h-full dark:bg-myGray bg-myLightGray rounded-3xl flex flex-col justify-center items-center p-6 py-10 lg:py-6">
                             <Subheader size="sm">

@@ -161,7 +161,7 @@
 
 </div>
 
-<div class="w-full h-full min-h-screen justify-start items-center flex flex-col overflow-hidden">
+<div class="w-full h-full min-h-screen justify-start items-center flex flex-col overflow-hidden py-2 md:py-20">
    <div class="lg:w-[90vw] xl:w-4/5 w-full px-6 h-full flex flex-col gap-6 justify-center items-center">
         <!-- First row -->
         <div class="w-full h-full flex lg:flex-row flex-col gap-6">
@@ -350,44 +350,10 @@
    </div>
 </div>
 
-    <!-- Hidden image -->
-    <div class="w-full min-h-[70vh] h-full justify-start items-center flex-col py-20 hidden">
-        <div class="w-full justify-start items-start flex px-8 lg:w-2/3">
-            <IntersectionObserver element={maincta} let:intersecting>
-                <div bind:this={maincta}>
-                  {#if intersecting}
-                  <div
-                  transition:fade={{ delay: 0, duration: 2000 }}
-                    >
-                    <h2 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-center hidden">
-                        Features
-                    </h2>
-                  </div>
-                  {/if}
-                </div>
-              </IntersectionObserver>
-        </div>
-
-        <IntersectionObserver element={features} let:intersecting once={true}>
-            <div bind:this={features}>
-                {#if intersecting}
-                <div
-                transition:fade={{ delay: 300, duration: 800 }}
-                  >
-                  <img src="/lg_bento_i.png" alt="bento" class="dark:hidden block">
-                  <img src="/n_bg_lg.png" alt="bento" class="hidden dark:block">
-                </div>
-                {/if}
-              </div>
-        
-        </IntersectionObserver>
-    
-
-    </div>
-
-    <div class="w-full flex flex-col text-center justify-center items-center h-[90vh] px-6 gap-4">
+    <div class="w-full flex flex-col text-center justify-center items-center h-[100vh] px-6 gap-4 relative">
+        <img class="absolute top-0 w-full h-full z-10 opacity-15" src="/bg.gif" alt="bg"  muted autoplay loop playsinline disablepictureinpicture/>
         <IntersectionObserver element={bottom} let:intersecting once={true}>
-            <div bind:this={bottom} class="w-full flex justify-center items-center">
+            <div bind:this={bottom} class="w-full flex justify-center items-center z-30">
                 {#if intersecting}
                     <div
                         transition:fade={{ delay: 300, duration: 1000 }}
@@ -399,18 +365,7 @@
                 {/if}
             </div>
         </IntersectionObserver>
-        <Button href="https://tally.so/r/3NVJ4j" slot="label" target="_blank" class="min-w-[20vw] hover:min-w-[30vw] transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl dark:hover:text-sec dark:hover:border-sec hover:bg-transparent px-6">Join Waitlist</Button>
-    </div>
-
-
-    <!-- Hidden Block -->
-    <div class="w-full min-h-[90vh] h-full hidden flex-col justify-center items-center gap-4">
-
-        <a href="https://tally.so/r/3NVJ4j" target="_blank" class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-main hover:text-sec dark:text-sec dark:hover:text-main text-center transition-all duration-500 ease-in-out">
-            Launching Soon
-        </a>
-
-        <!-- <Button href="https://tally.so/r/3NVJ4j" slot="label" target="_blank" class="w-[20vw] rounded-full border-[0.5px] border-main bg-transparent text-main text-xl hover:text-white hover:border-white hover:bg-transparent">Join Waitlist</Button> -->
+        <Button href="https://tally.so/r/3NVJ4j" slot="label" target="_blank" class="min-w-[20vw] z-30 hover:min-w-[30vw] transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl dark:hover:text-sec dark:hover:border-sec hover:bg-transparent px-6">Join Waitlist</Button>
     </div>
 
 </div>

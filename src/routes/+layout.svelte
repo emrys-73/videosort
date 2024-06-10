@@ -37,7 +37,7 @@
 		<slot/>
 	</div>
 
-	<div class="w-full absolute bottom-0 h-16 dark:bg-transparent  text-main dark:text-secc bg-myLightGray justify-between items-center px-8 py-2 flex flex-row">
+	<div class="w-full absolute bottom-0 h-16 dark:bg-transparent  text-main dark:text-secc bg-myLightGray justify-between items-center px-8 py-2 flex flex-row backdrop-blur-md z-50">
 		<div>
 			All rights reserved
 		</div>

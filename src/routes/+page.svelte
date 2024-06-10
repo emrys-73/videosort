@@ -155,7 +155,7 @@
         <Button href="https://tally.so/r/3NVJ4j" slot="label" target="_blank" class="min-w-[20vw] hover:min-w-[30vw] transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl dark:hover:text-sec dark:hover:border-sec hover:bg-transparent px-6">Join Waitlist</Button>
     </div>
 
-    <div class="absolute bottom-6 dark:text-sec text-main breathe">
+    <div class="absolute bottom-6 dark:text-sec text-main breathe mb-16 sm:mb-0">
         Scroll to explore
     </div>
 

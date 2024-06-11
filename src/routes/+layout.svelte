@@ -5,7 +5,6 @@
   	import Moon from "svelte-radix/Moon.svelte";
   	import { toggleMode } from "mode-watcher";
   	import Button from '$lib/components/ui/button/button.svelte';
-	import { inject } from '@vercel/analytics'
 	import { onMount } from 'svelte';
 
 	onMount(() => {

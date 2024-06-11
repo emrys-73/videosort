@@ -129,7 +129,7 @@
                         transition:fade={{ delay: 200, duration: 1000 }}
                         >
                         <h1 class="scroll-m-20 {headerGradient ? gradient : 'text-main'} font-bold text-5xl lg:text-7xl text-center">
-                            Automatic Footage Sorting and Labelling for Filmmakers and Content Creators
+                            Automatic Footage Labelling for Filmmakers and Content Creators
                         </h1>
                     </div>
                 {/if}
@@ -332,7 +332,7 @@
                                     Coming soon
                                 </div>
                                 <Subheader>
-                                    Generative AI agents use your briefings achieving
+                                    Custom automations to achieve
                                 </Subheader>
 
                                 <GradientText>

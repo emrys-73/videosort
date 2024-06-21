@@ -225,7 +225,7 @@
                                 </div>
                                 <div class="flex w-full justify-end">
                                     <div class="bg-main text-sec font-semibold rounded-full px-4 py-1 drop-shadow-md">
-                                        04:12 Boxing Gloves
+                                        04:13 Boxing Gloves
                                     </div>
                                 </div>
                             </div>

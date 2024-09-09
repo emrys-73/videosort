@@ -380,7 +380,7 @@
                 {/if}
             </div>
         </IntersectionObserver>
-        <Button href="https://tally.so/r/3jMpY1" slot="label" target="_blank" class="min-w-[20vw] hover:min-w-[30vw] transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl dark:hover:text-sec dark:hover:border-sec hover:bg-transparent px-6">Join the Waitlist</Button>
+        <Button href="https://tally.so/r/3jMpY1" slot="label" target="_blank" class="min-w-[20vw] hover:min-w-[30vw] z-50 transition-all duration-500 ease-in-out rounded-full border-[0.5px] border-main bg-transparent text-main lg:text-xl dark:hover:text-sec dark:hover:border-sec hover:bg-transparent px-6">Join the Waitlist</Button>
     </div>
 </div>
 {/if}

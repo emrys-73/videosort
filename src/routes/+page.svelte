@@ -304,7 +304,7 @@
                                 >
                             <div class="w-full h-full min-h-[15vh] rounded-3xl dark:bg-myGray bg-myLightGray flex flex-row justify-center items-center p-6 gap-6">
                                 <GradientText size="lg">
-                                    Label 10 Hours of Footage in 10 Minutes
+                                    Label footage 10x faster
                                 </GradientText>
                                 <!-- <h4 class=" font-semibold tracking-wider text-main dark:text-main text-lg md:text-xl lg:text-2xl xl:text-3xl">
                                     Faster than manual labelling

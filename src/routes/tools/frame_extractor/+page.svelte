@@ -130,7 +130,7 @@
             <div
                 role="button" 
                 tabindex="0"
-                class={`min-h-[80vh] justify-center items-center flex flex-col gap-4 rounded-xl border-2 border-main border-dashed h-full w-full ${dragActive ? 'bg-transparent border-opacity-100' : 'bg-transparent border-opacity-40'} transition-all duration-300 ease-in-out px-6 py-10 text-center cursor-pointer`}
+                class={`min-h-[80vh] justify-center items-center flex flex-col gap-4 rounded-2xl border-2 border-main border-dashed h-full w-full ${dragActive ? 'bg-transparent border-opacity-100' : 'bg-transparent border-opacity-40'} transition-all duration-300 ease-in-out px-6 py-10 text-center cursor-pointer`}
                 on:dragover={handleDragOver}
                 on:dragleave={handleDragLeave}
                 on:drop={handleDrop}
@@ -147,7 +147,7 @@
             </div>
         </div> 
 
-        <div class="w-full md:w-2/5 h-full bg-main bg-opacity-0 flex flex-col justify-start items-center gap-4 rounded-xl min-h-[30vh] md:min-h-[80vh] relative">
+        <div class="w-full md:w-2/5 h-full flex flex-col justify-start items-center gap-4 rounded-xl min-h-[30vh] md:min-h-[80vh] relative">
           <h2 class="w-full justify-start items-center flex text-lg font-semibold">
             Extraction Rate (in fps)
           </h2>

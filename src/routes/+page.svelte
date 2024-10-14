@@ -183,7 +183,7 @@
                         <span class="text-main font-semibold text-xl">
                             Let's fix that
                         </span>
-                        <img src="/ari.png" alt="arr" class="scale-75">
+                        <img src="/ari.png" alt="arr" class="scale-75 hidden">
                     </div>
                 {/if}
             </div>

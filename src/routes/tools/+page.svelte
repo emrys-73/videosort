@@ -18,7 +18,7 @@
 <div class="w-full h-full justify-center items-center flex flex-col px-4 py-2 gap-4">
     {#each tools as t}
         {#if t.active}
-            <a href={t.route} class="bg-main px-4 py-2 rounded-xl">
+            <a href={t.route} class="bg-main px-8 py-2 rounded-xl">
                 {t.name}
             </a>
         {/if}

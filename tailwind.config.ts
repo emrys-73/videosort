@@ -15,7 +15,7 @@ const config: Config = {
 		},
 		extend: {
 			colors: {
-				main: '#D72655',
+				main: '#E2261D',
 				sec: '#F2C798',
 				myBlack: '#0E0004',
 				myGray:'#161412',
